@@ -1,0 +1,23 @@
+﻿The CaseML_Pistons1D_CIEM is empploying the geometry and the wave conditions from an experimental campaing carried out 
+at the Canal d’Investigació i Experimentació Marítima (CIEM) of the Universitat Politècnica de Catalunya (UPC), in Barcelona.
+The CIEM flume is a large-scale wave flume of 100m length, 3m width and 4.5m depth. 
+
+Several experiments were carried out within the framework of the Scandura data set [Scandura & Foti, 2011], part of the Hydralab III EU-funded project.
+Regular waves are used for the present case study.
+
+SWASH model has been previously validated against the experimental data. Then, location for the coupling between SWASH and DualSPHysics model
+has been set at x=43.10m from the initial position of the experimental wavemaker at rest.
+
+The bacth file w01_CaseML_CIEM_SWASH_win64.bat executes SWASH (v.5.01), extract the velocity data at the coupling location and create .vtk files to visualize 
+the velocity and the displacement of the Moving-Layer Piston in Paraview.
+
+The batch file w02_CaseML_CIEM_win64_GPU executes DualSPHysics and the post-processing tools. 
+
+References:
+
+C. Altomare, J. M. Domínguez, A. J. C. Crespo, T. Suzuki, I. Caceres & M. Gómez-Gesteira (2015) Hybridization of the Wave Propagation 
+Model SWASH and the Meshfree Particle Method SPH for Real Coastal Applications, Coastal Engineering Journal, 
+57:4, 1550024-1-1550024-34, DOI: https://doi.org/10.1142/S0578563415500242
+
+Pietro Scandura & Enrico Foti (2011) Measurements of wave-induced steady currents outside the surf zone, Journal of Hydraulic Research,
+49:sup1, 64-71, DOI: https://doi.org/10.1080/00221686.2011.591046

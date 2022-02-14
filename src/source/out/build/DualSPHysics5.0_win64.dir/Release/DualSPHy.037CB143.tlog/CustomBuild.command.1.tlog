@@ -1,0 +1,186 @@
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JCELLDIVGPU_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JCELLDIVGPUSINGLE_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JDSPIPS_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JDSGAUGE_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JREDUSUM_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JSPHSHIFTING_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JDSACCINPUT_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JSPHGPU_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JSPHGPUSIMPLE_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JWAVEORDER2_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\JRELAXZONE_KER.CU
+setlocal
+cd E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -D verbose:BOOL=OFF -D "CCBIN:PATH=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools/MSVC/14.28.29910/bin/Hostx64/x64" -D build_configuration:STRING=Release -D generated_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj -D generated_cubin_file:STRING=E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//Release/DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.cubin.txt -P E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/DualSPHysics5.0_win64.dir//DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.Release.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source -BE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build --check-stamp-file E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

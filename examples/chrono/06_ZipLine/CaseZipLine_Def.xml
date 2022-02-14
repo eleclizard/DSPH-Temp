@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase4 v4.0.033 (14-11-2016)" date="04-05-2017 16:10:43">
+    <casedef>
+        <constantsdef>
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000" comment="Reference density of the fluid" units_comment="kg/m^3" />
+            <hswl value="0.8" auto="false" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" />
+            <gamma value="7" comment="Polytropic constant for water used in the state equation" />
+            <speedsystem value="0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" />
+            <coefsound value="20" comment="Coefficient to multiply speedsystem" />
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
+            <coefh value="1.3" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
+            <cflnumber value="0.2" comment="Coefficient to multiply dt" />
+        </constantsdef>
+        <mkconfig boundcount="240" fluidcount="9" />
+        <geometry>
+            <definition dp="0.04" comment="Initial inter-particle distance" units_comment="metres (m)">
+                <pointmin x="-0.5" y="-1.5" z="-10.0" />
+                <pointmax x="11.2" y="1.5" z="0.5" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>dp | actual | bound</setshapemode>
+                    <setdrawmode mode="full" />
+					<!-- Domain -->
+                    <setmkbound mk="1" />
+                    <drawbox>
+                        <boxfill>all^top</boxfill>
+                        <point x="-1.0" y="-2.0" z="-10" />
+                        <size x="12.0" y="4.0" z="5.0" />
+                    </drawbox>
+					<matrixreset />
+					<!-- Rope -->
+					<setmkbound mk="0" />
+					<drawline>
+                        <point x="0" y="-0.2" z="-0.6" />
+                        <point x="11" y="-0.2" z="-9" />
+                    </drawline>
+					<!-- Ragdoll parts -->
+                    <setmkbound mk="2" />
+                    <drawfilestl file="ragdoll/head.stl">
+                        <drawmove x="0" y="0" z="0.03" />
+                    </drawfilestl>                    
+                    <setmkbound mk="3" />
+                    <drawfilestl file="ragdoll/body.stl" />                    
+                    <setmkbound mk="4" />
+                    <drawfilestl file="ragdoll/arm_left.stl">
+                        <drawmove x="0" y="-0.03" z="0" />
+                    </drawfilestl>
+                    <setmkbound mk="5" />
+                    <drawfilestl file="ragdoll/arm_right.stl">
+                        <drawmove x="0" y="0.03" z="0" />
+                    </drawfilestl>
+                    <setmkbound mk="6" />
+                    <drawfilestl file="ragdoll/forearm_left.stl">
+                        <drawmove x="0" y="-0.03" z="0" />
+                    </drawfilestl>
+                    <setmkbound mk="7" />
+                    <drawfilestl file="ragdoll/forearm_right.stl">
+                        <drawmove x="0" y="0.03" z="0" />
+                    </drawfilestl>
+                    <setmkbound mk="8" />
+                    <drawfilestl file="ragdoll/leg_left.stl">
+                        <drawmove x="0" y="0" z="-0.03" />
+                    </drawfilestl>
+                    <setmkbound mk="9" />
+                    <drawfilestl file="ragdoll/leg_right.stl">
+                        <drawmove x="0" y="0" z="-0.03" />
+                    </drawfilestl>
+                    <setmkbound mk="10" />
+                    <drawfilestl file="ragdoll/calf_left.stl">
+                        <drawmove x="0" y="0" z="-0.06" />
+                    </drawfilestl>
+                    <setmkbound mk="11" />
+                    <drawfilestl file="ragdoll/calf_right.stl">
+                        <drawmove x="0" y="0" z="-0.06" />
+                    </drawfilestl>					
+					<shapeout file="" reset="true" />
+                </mainlist>
+            </commands>
+        </geometry>
+        <floatings>
+            <floating mkbound="2-20" rhopbody="1.0" property="soft-wood"/>
+        </floatings>
+        <properties>
+            <propertyfile file="Floating_Materials.xml" path="materials" />
+            <links>
+                <link mkbound="1" property="steel" comment="Property for the fixed bound" />
+            </links>
+        </properties>
+    </casedef>
+    <execution>
+        <special>
+            <chrono datadir=".">
+                <_savedata value="0.02" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
+				<schemescale value="1" comment="Scale used to create the initial scheme of Chrono objects (default=1)" />
+				<collision activate="true">
+				    <distancedp value="0.5" comment="Allowed collision overlap according Dp (default=0.5)" />
+					<contactmethod value="0" comment="Contact method type. 0:NSC (Non Smooth Contacts), 1:SMC (SMooth Contacts). (default=0)" />	
+				</collision>
+				<bodyfixed id="domain" mkbound="1" modelfile="AutoActual" modelnormal="invert" />
+                <bodyfloating id="head" mkbound="2" modelfile="AutoActual" />
+                <bodyfloating id="body" mkbound="3" modelfile="AutoActual" />
+                <bodyfloating id="arm_left" mkbound="4" modelfile="AutoActual" />
+				<bodyfloating id="arm_right" mkbound="5" modelfile="AutoActual" />
+                <bodyfloating id="forearm_left" mkbound="6" modelfile="AutoActual" />
+                <bodyfloating id="forearm_right" mkbound="7" modelfile="AutoActual" />
+                <bodyfloating id="leg_left" mkbound="8" modelfile="AutoActual" />
+                <bodyfloating id="leg_right" mkbound="9" modelfile="AutoActual" />
+                <bodyfloating id="calf_left" mkbound="10" modelfile="AutoActual" />
+                <bodyfloating id="calf_right" mkbound="11" modelfile="AutoActual" />
+                <!-- Elbows -->
+				<link_hinge idbody1="arm_left" idbody2="forearm_left">
+					<rotpoint x="0" y="-0.18" z="-0.381" comment="Point for rotation" />
+					<rotvector x="1" y="0" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_hinge>
+				<link_hinge idbody1="arm_right" idbody2="forearm_right">
+					<rotpoint x="0" y="0.18" z="-0.381" comment="Point for rotation" />
+					<rotvector x="1" y="0" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_hinge>
+				<!-- Knees -->
+				<link_hinge idbody1="leg_left" idbody2="calf_left">
+					<rotpoint x="0" y="-0.055" z="-0.837" comment="Point for rotation" />
+					<rotvector x="0" y="1" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_hinge>
+				<link_hinge idbody1="leg_right" idbody2="calf_right">
+					<rotpoint x="0" y="0.055" z="-0.837" comment="Point for rotation" />
+					<rotvector x="0" y="1" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_hinge>
+				<!-- Neck -->
+				<link_spheric idbody1="head" idbody2="body">
+					<rotpoint x="0" y="0" z="-0.125" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_spheric>
+				<!-- Shoulders -->
+				<link_spheric idbody1="body" idbody2="arm_left">
+					<rotpoint x="0" y="-0.136" z="-0.17" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_spheric>
+				<link_spheric idbody1="body" idbody2="arm_right">
+					<rotpoint x="0" y="0.136" z="-0.17" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_spheric>
+				<!-- Hips -->
+				<link_spheric idbody1="body" idbody2="leg_left">
+					<rotpoint x="0" y="-0.055" z="-0.532" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_spheric>
+				<link_spheric idbody1="body" idbody2="leg_right">
+					<rotpoint x="0" y="0.055" z="-0.532" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+				</link_spheric>
+				<!-- Rope -->
+				<link_pointline idbody1="forearm_left">
+					<slidingvector x="11" y="0" z="-8.4" comment="Vector direction for sliding axis" />
+                    <rotpoint x="0" y="-0.2" z="-0.6" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+                </link_pointline>
+            </chrono>
+        </special>
+        <parameters>
+            <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />
+            <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping (default=40)" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (default=2)" />
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
+            <parameter key="Visco" value="0.01" comment="Viscosity value" />
+            <parameter key="ViscoBoundFactor" value="1" comment="Multiply viscosity value with boundary (default=1)" />
+			<parameter key="DensityDT" value="0" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
+			<parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
+            <parameter key="Shifting" value="0" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
+            <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
+            <parameter key="ShiftTFS" value="0" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
+            <parameter key="RigidAlgorithm" value="3" comment="Rigid Algorithm 0:collision-free, 1:SPH, 2:DEM, 3:Chrono (default=1)" />
+            <parameter key="FtPause" value="0.0" comment="Time to freeze the floatings at simulation start (warmup) (default=0)" units_comment="seconds" />
+            <parameter key="CoefDtMin" value="0.05" comment="Coefficient to calculate minimum time step dtmin=coefdtmin*h/speedsound (default=0.05)" />
+            <parameter key="DtIni" value="0" comment="Initial time step. Use 0 to defult use (default=h/speedsound)" units_comment="seconds" />
+            <parameter key="DtMin" value="0" comment="Minimum time step. Use 0 to defult use (default=coefdtmin*h/speedsound)" units_comment="seconds" />
+            <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
+            <parameter key="TimeMax" value="3.5" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.02" comment="Time out data" units_comment="seconds" />
+            <parameter key="PartsOutMax" value="1" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
+            <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
+            <simulationdomain comment="Defines domain of simulation (default=Uses minimun and maximum position of the generated particles)">
+                <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
+                <posmax x="default" y="default" z="default + 10%" />
+            </simulationdomain>
+        </parameters>
+    </execution>
+</case>

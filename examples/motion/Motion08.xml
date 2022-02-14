@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase4 v4.0.053 (24-10-2017)" date="07-11-2017 14:19:58">
+    <casedef>
+        <constantsdef>
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000" comment="Reference density of the fluid" units_comment="kg/m^3" />
+            <hswl value="0" auto="true" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" />
+            <gamma value="7" comment="Polytropic constant for water used in the state equation" />
+            <speedsystem value="0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" />
+            <coefsound value="20" comment="Coefficient to multiply speedsystem" />
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
+            <coefh value="1.0" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
+            <cflnumber value="0.2" comment="Coefficient to multiply dt" />
+        </constantsdef>
+        <mkconfig boundcount="230" fluidcount="9">
+            <mkorientfluid mk="0" orient="Xyz" />
+        </mkconfig>
+        <geometry>
+            <definition dp="0.02">
+                <pointmin x="0" y="0" z="0" />
+                <pointmax x="7" y="3.5" z="2.5" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>real | bound</setshapemode>
+                    <setdrawmode mode="solid" />
+                    <setdpctes ctespherenumsides="32" />
+                    <setdpctes ctecylindernumsides="32" />
+                    <setmkbound mk="0" />
+                    <drawbox>
+                        <boxfill>all</boxfill>
+                        <point x="0" y="0" z="0" />
+                        <size x="6.4" y="3.4" z="0.02" />
+                    </drawbox>
+                    <setmkbound mk="200" />
+                    <drawsphere radius="0.2">
+                        <point x="0.2" y="3.2" z="2.22" />
+                    </drawsphere>
+                    <setmkbound mk="150" />
+                    <drawcylinder radius="0.12" mask="1">
+                        <point x="0.2" y="3.2" z="0.02" />
+                        <point x="0.2" y="3.2" z="0.03" />
+                    </drawcylinder>
+                    <setmkbound mk="151" />
+                    <drawcylinder radius="0.2" mask="1">
+                        <point x="0.2" y="3.41" z="2.22" />
+                        <point x="0.2" y="3.4" z="2.22" />
+                    </drawcylinder>
+                    <setmkbound mk="152" />
+                    <drawcylinder radius="0.2" mask="1">
+                        <point x="-0.01" y="3.2" z="2.22" />
+                        <point x="0" y="3.2" z="2.22" />
+                    </drawcylinder>
+                    <shapeout file="" />
+                </mainlist>
+            </commands>
+        </geometry>
+        <motion>
+            <objreal ref="200">
+                <begin mov="1" start="0" />
+                <mvfile id="1" duration="10">
+                    <file name="Motion08mov_f3.txt" fields="4" fieldtime="0" fieldx="1" fieldy="2" fieldz="3" />
+                </mvfile>
+            </objreal>
+            <objreal ref="150">
+                <begin mov="1" start="0" />
+                <mvfile id="1" duration="8" next="2">
+                    <file name="Motion08mov_f3.txt" fields="4" fieldtime="0" fieldx="1" fieldy="2" />
+                </mvfile>
+                <mvrect id="2" duration="-1">
+                    <vel x="0" y="0" z="-0.02" />
+                </mvrect>
+            </objreal>
+            <objreal ref="151">
+                <begin mov="1" start="0" />
+                <mvfile id="1" duration="10">
+                    <file name="Motion08mov_f3.txt" fields="4" fieldtime="0" fieldx="1" fieldz="3" />
+                </mvfile>
+            </objreal>
+            <objreal ref="152">
+                <begin mov="1" start="0" />
+                <mvfile id="1" duration="10">
+                    <file name="Motion08mov_f3.txt" fields="4" fieldtime="0" fieldy="2" fieldz="3" />
+                </mvfile>
+            </objreal>
+        </motion>
+    </casedef>
+    <execution>
+        <parameters>
+            <parameter key="TimeMax" value="10" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.02" comment="Time out data" units_comment="seconds" />
+        </parameters>
+        <particles np="114667" nb="114667" nbf="109782" mkboundfirst="11" mkfluidfirst="1">
+            <_summary>
+                <fixed count="109782" id="0-109781" mkcount="1" mkvalues="11" />
+                <moving count="4885" id="109782-114666" mkcount="4" mkvalues="161-163,211" />
+            </_summary>
+            <fixed mkbound="0" mk="11" begin="0" count="109782" />
+            <moving mkbound="150" mk="161" begin="109782" count="110" refmotion="0" />
+            <moving mkbound="151" mk="162" begin="109892" count="311" refmotion="1" />
+            <moving mkbound="152" mk="163" begin="110203" count="312" refmotion="2" />
+            <moving mkbound="200" mk="211" begin="110515" count="4152" refmotion="3" />
+        </particles>
+        <constants>
+            <gravity x="0" y="0" z="-9.81" units_comment="m/s^2" />
+            <cflnumber value="0.2" />
+            <gamma value="7" />
+            <rhop0 value="1000" units_comment="kg/m^3" />
+            <dp value="0.02" units_comment="metres (m)" />
+            <h value="3.4641016151E-002" units_comment="metres (m)" />
+            <b value="0.0000000000E+000" units_comment="Pascal (Pa)" />
+            <massbound value="8.0000000000E-003" units_comment="kg" />
+            <massfluid value="8.0000000000E-003" units_comment="kg" />
+        </constants>
+        <motion>
+            <objreal ref="3">
+                <begin mov="1" start="0" />
+                <mvrectfile id="1" duration="10">
+                    <file name="Motion08mov_f3.txt" fields="4" fieldtime="0" fieldx="1" fieldy="2" fieldz="3" />
+                </mvrectfile>
+            </objreal>
+            <objreal ref="0">
+                <begin mov="1" start="0" />
+                <mvrectfile id="1" duration="8" next="2">
+                    <file name="Motion08mov_f3.txt" fields="4" fieldtime="0" fieldx="1" fieldy="2" />
+                </mvrectfile>
+                <mvrect id="2" duration="-1">
+                    <vel x="0" y="0" z="-0.02" units_comment="m/s" />
+                </mvrect>
+            </objreal>
+            <objreal ref="1">
+                <begin mov="1" start="0" />
+                <mvrectfile id="1" duration="10">
+                    <file name="Motion08mov_f3.txt" fields="4" fieldtime="0" fieldx="1" fieldz="3" />
+                </mvrectfile>
+            </objreal>
+            <objreal ref="2">
+                <begin mov="1" start="0" />
+                <mvrectfile id="1" duration="10">
+                    <file name="Motion08mov_f3.txt" fields="4" fieldtime="0" fieldy="2" fieldz="3" />
+                </mvrectfile>
+            </objreal>
+        </motion>
+    </execution>
+</case>

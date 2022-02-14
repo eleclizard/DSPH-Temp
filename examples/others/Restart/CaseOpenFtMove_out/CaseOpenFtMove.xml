@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase v5.0.197 (18-07-2020)" date="28-07-2020 12:59:20">
+    <casedef>
+        <constantsdef>
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <cflnumber value="0.2" comment="Coefficient to multiply Dt" />
+            <hswl value="0" auto="true" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" />
+            <speedsystem value="0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" />
+            <coefsound value="20" comment="Coefficient to multiply speedsystem" />
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
+            <coefh value="1.0" comment="Coefficient to calculate the smoothing length (H=coefficient*sqrt(3*dp^2) in 3D)" />
+            <gamma value="7" comment="Politropic constant for water used in the state equation" />
+            <rhop0 value="1000" comment="Reference density of the fluid" units_comment="kg/m3" />
+        </constantsdef>
+        <mkconfig boundcount="240" fluidcount="9" />
+        <geometry>
+            <definition dp="0.02" units_comment="metres (m)">
+                <pointmin x="-1" y="0" z="-1" />
+                <pointmax x="4.5" y="0" z="3.5" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>actual | bound</setshapemode>
+                    <setdrawmode mode="full" />
+                    <setmkfluid mk="0" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0" y="-1" z="0" />
+                        <size x="3" y="2" z="1" />
+                    </drawbox>
+                    <setmkbound mk="0" />
+                    <drawbox>
+                        <boxfill>bottom</boxfill>
+                        <point x="0" y="-1" z="0" />
+                        <size x="3" y="2" z="1" />
+                    </drawbox>
+                    <setmkbound mk="1" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.3" y="-1" z="0.2" />
+                        <size x="0.05" y="2" z="0.2" />
+                    </drawbox>
+                    <setmkbound mk="3" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.0" y="-1" z="0.4" />
+                        <size x="0.2" y="2" z="0.1" />
+                    </drawbox>
+                    <setmkbound mk="2" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.5" y="-1" z="0.8" />
+                        <size x="0.1" y="2" z="0.1" />
+                    </drawbox>
+                    <setmkbound mk="4" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="2.8" y="-1" z="0.7" />
+                        <size x="0.1" y="2" z="0.1" />
+                    </drawbox>
+                    <shapeout file="" />
+                </mainlist>
+            </commands>
+        </geometry>
+        <motion>
+            <objreal ref="1">
+                <begin mov="1" start="0.01" />
+                <mvrectsinu id="1" duration="100" anglesunits="degrees">
+                    <freq x="0.2" y="0" z="0" units_comment="1/s" />
+                    <ampl x="2.2" y="0" z="0" units_comment="metres (m)" />
+                    <phase x="-90" y="0" z="0" units_comment="degrees" />
+                </mvrectsinu>
+            </objreal>
+        </motion>
+        <floatings>
+            <floating mkbound="2" rhopbody="2000" property="steel" />
+            <floating mkbound="3" rhopbody="500" property="pvc" />
+            <floating mkbound="4" rhopbody="500" property="pvc" />
+        </floatings>
+        <properties>
+            <propertyfile file="Floating_Materials.xml" path="materials" />
+            <links>
+                <link mkbound="0-1" property="steel" />
+            </links>
+        </properties>
+    </casedef>
+    <execution>
+        <parameters>
+            <parameter key="StepAlgorithm" value="1" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping (default=40)" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (default=2)" />
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
+            <parameter key="Visco" value="0.02" comment="Viscosity value" units_comment="m2/s" />
+            <parameter key="ViscoBoundFactor" value="1" comment="Multiply viscosity value with boundary (default=1)" />
+            <parameter key="DensityDT" value="2" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
+            <parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
+            <parameter key="Shifting" value="0" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
+            <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
+            <parameter key="ShiftTFS" value="0" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
+            <parameter key="RigidAlgorithm" value="2" comment="Rigid Algorithm 0:collision-free, 1:SPH, 2:DEM, 3:Chrono (default=1)" />
+            <parameter key="FtPause" value="0.0" comment="Time to freeze the floatings at simulation start (warmup) (default=0)" units_comment="seconds" />
+            <parameter key="CoefDtMin" value="0.05" comment="Coefficient to calculate minimum time step dtmin=coefdtemin*h/speedsound (default=0.05)" />
+            <parameter key="DtIni" value="0" comment="Initial time step. Use 0 to defult use (default=h/speedsound)" units_comment="seconds" />
+            <parameter key="DtMin" value="0" comment="Minimum time step. Use 0 to defult use (default=coefdtmin*h/speedsound)" units_comment="seconds" />
+            <parameter key="DtFixed" value="0" comment="Fixed Dt value. Use 0 to disable (default=disabled)" units_comment="seconds" />
+            <parameter key="DtFixedFile" value="NONE" comment="Dt values are loaded from file. Use NONE to disable (default=disabled)" units_comment="milliseconds (ms)" />
+            <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
+            <parameter key="TimeMax" value="3" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.01" comment="Time out data" units_comment="seconds" />
+            <parameter key="PartsOutMax" value="1" comment="Allowed %/100 of fluid particles out the domain (default=1)" units_comment="decimal" />
+            <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (default=700)" units_comment="kg/m3" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m3" />
+            <parameter key="XPeriodicIncZ" value="0" comment="Periodic BC in X" />
+            <simulationdomain comment="Defines domain of simulation (default=Uses minimun and maximum position of the generated particles)">
+                <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
+                <posmax x="default" y="default" z="default + 100%" />
+            </simulationdomain>
+        </parameters>
+        <particles np="7701" nb="333" nbf="151" mkboundfirst="10" mkfluidfirst="1">
+            <_summary>
+                <positions units_comment="metres (m)">
+                    <posmin x="0" y="0" z="0" />
+                    <posmax x="3" y="0" z="1" />
+                </positions>
+                <fixed count="151" id="0-150" mkcount="1" mkvalues="10" />
+                <moving count="44" id="151-194" mkcount="1" mkvalues="11" />
+                <floating count="138" id="195-332" mkcount="3" mkvalues="12-14" />
+                <fluid count="7368" id="333-7700" mkcount="1" mkvalues="1" />
+            </_summary>
+            <fixed mkbound="0" mk="10" begin="0" count="151" property="steel" />
+            <moving mkbound="1" mk="11" begin="151" count="44" property="steel" refmotion="0" />
+            <floating mkbound="2" mk="12" begin="195" count="36" property="steel">
+                <massbody value="28.8" units_comment="kg" />
+                <masspart value="0.4" units_comment="kg" />
+                <center x="1.55" y="0" z="0.85" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.0336" v12="0" v13="6.93889e-19" />
+                    <values v21="0" v22="0.0672" v23="0" />
+                    <values v31="6.93889e-19" v32="0" v33="0.0336" />
+                </inertia>
+            </floating>
+            <floating mkbound="3" mk="13" begin="231" count="66" property="pvc">
+                <massbody value="13.2" units_comment="kg" />
+                <masspart value="0.4" units_comment="kg" />
+                <center x="1.1" y="0" z="0.45" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.0154" v12="0" v13="-3.46945e-19" />
+                    <values v21="0" v22="0.0682" v23="0" />
+                    <values v31="-3.46945e-19" v32="0" v33="0.0528" />
+                </inertia>
+            </floating>
+            <floating mkbound="4" mk="14" begin="297" count="36" property="pvc">
+                <massbody value="7.2" units_comment="kg" />
+                <masspart value="0.4" units_comment="kg" />
+                <center x="2.85" y="0" z="0.75" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.0084" v12="0" v13="-1.73472e-19" />
+                    <values v21="0" v22="0.0168" v23="0" />
+                    <values v31="-1.73472e-19" v32="0" v33="0.0084" />
+                </inertia>
+            </floating>
+            <fluid mkfluid="0" mk="1" begin="333" count="7368" />
+            <properties>
+                <links>
+                    <link mk="10-12" property="steel" />
+                    <link mk="13-14" property="pvc" />
+                </links>
+                <property name="steel">
+                    <Young_Modulus value="210000000000.0" comment="Young Modulus (N/m2)" />
+                    <PoissonRatio value="0.30" comment="Poisson Ratio (-)" />
+                    <Restitution_Coefficient value="0.70" comment="Restitution Coefficient (-)" />
+                    <Kfric value="0.45" comment="Kinetic friction coefficient" />
+                </property>
+                <property name="pvc">
+                    <Young_Modulus value="3000000000.0" comment="Young Modulus (N/m2)" />
+                    <PoissonRatio value="0.30" comment="Poisson Ratio (-)" />
+                    <Restitution_Coefficient value="0.60" comment="Restitution Coefficient (-)" />
+                    <Kfric value="0.45" comment="Kinetic friction coefficient" />
+                </property>
+            </properties>
+        </particles>
+        <constants>
+            <data2d value="true" />
+            <data2dposy value="0" units_comment="metres (m)" />
+            <gravity x="0" y="0" z="-9.81" units_comment="m/s^2" />
+            <cflnumber value="0.2" />
+            <gamma value="7" />
+            <rhop0 value="1000" units_comment="kg/m^3" />
+            <dp value="0.02" units_comment="metres (m)" />
+            <h value="0.028284271247" units_comment="metres (m)" />
+            <b value="549360" units_comment="Pascal (Pa)" />
+            <massbound value="0.4" units_comment="kg" />
+            <massfluid value="0.4" units_comment="kg" />
+        </constants>
+        <motion>
+            <objreal ref="0">
+                <begin mov="1" start="0.01" />
+                <mvrectsinu id="1" duration="100" anglesunits="degrees">
+                    <freq x="0.2" y="0" z="0" units_comment="1/s" />
+                    <ampl x="2.2" y="0" z="0" units_comment="metres (m)" />
+                    <phase x="-90" y="0" z="0" units_comment="degrees" />
+                </mvrectsinu>
+            </objreal>
+        </motion>
+        <vtkout mkboundfirst="10" mkfluidfirst="1">
+            <vtkfile name="CaseOpenFtMove__Actual.vtk" mk="10-14" mkbound="0-4" />
+        </vtkout>
+    </execution>
+</case>

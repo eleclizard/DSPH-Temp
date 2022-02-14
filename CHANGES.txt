@@ -1,0 +1,308 @@
+﻿Latest changes (22-02-2021)  
+=======================================
+Inprovements in DualSPHysics solver:
+- Motion: Predefined motion is supported by paddles but applies when wave generation is not active.
+- Fixed bug on OpenMP activation for mDBC and some tasks of Inlet/outlet on CPU.
+- Removes ALMOSTZERO condition in the interaction of ghost nodes for mDBC.
+- Fixed minor bug in Run.csv file when hostname was available.
+- New execution option to fix the cell domain to maximum limits.
+- Improved output format of configuration values according to precision type.
+
+
+DualSPHysics Package v5.0 (27-01-2021) 
+=======================================
+Inprovements in DualSPHysics solver:
+- Fixed bug on inlet when zsurf is undefined on Linux.
+- Fixed bug on cell-position on GPU when X-Cell higher than 4095 was used.
+Inprovements in Pre-processing tool (GenCase):
+- New option savenormal in <shapeout> to create VTK with normal lines.
+- Supports negative values in domain size of <clipbox>, <drawbox>, <fillbox>, <redrawbox> and <redrawnearbox>.
+- Operation <frdrawpartsvtk> supports extenal points with data.
+Inprovements in Post-processing tools:
+- MeasureTool: Fixed option to save template files.
+- MeasureTool: New option POINTSENDLIST to define interpolation positions.
+- MeasureTool: New option -savecsvpart to create one file per PART.
+
+DualSPHysics Package v5.0 (26-11-2020) 
+=======================================
+Inprovements in DualSPHysics solver:
+- Chrono: New option to impose kfric value of a body when it collides with another.
+- Chrono: Allow variable stiffness and damping for all kind of ChLinks.
+- Chrono: Shows number of collision shapes.
+- Fixed bug when no fluid or floating particles in velocity reduction and PIPs calculation on GPU.
+- Inlet: Improves the use of interpolated velocity.
+- mDBC: Option MDBCFastSingle for using fast single precision calculation on GPU.  
+- Initialize: New filter onlypos according to particle position.
+- Code cleaning.
+Inprovements in Pre-processing tool (GenCase):
+- Fixed error in cylinder drawing with FrDraw mode.
+- New options in Initials section of XML to define the velocity or density of fluid particles from mesh-data file.
+- New commands to clip output geometry: <clipdomain>, <clipplane>, <clipbox> and <clipreset>.
+- Clip commands are also applied to draw points.
+- Drawing cylinders with solid mode is best suited to the size of the cylinder.
+- Improvements in XML programming: 
+  - String variables are supported by the parameter layers of DrawBox, DrawExtrude, DrawSphere, DrawCylinder, DrawParabolicBeach, DrawRevolution.
+  - It is applied to AutoFill in <drawfilevtk>, <drawfilestl>, <drawfileply> and <frdrawpartsvtk>.
+  - New fuction rand(vmin,vmax).
+  - It is applied to XML operation <setdpctes>.
+  - The option IF is supported by section <predefinition>.
+  - Supports arrays (variable name + [number] as namenumber variable).
+- Performance improvement (20-150x) in the calculation of normals data.
+- Performance improvement (40-800x) removing overlaped free-particles.
+Inprovements in Post-processing tools:
+- BoundaryVTK: Supports PartFloatMotion.fbi4 with position data and high frequency.
+- BoundaryVTK: New option -motionfocus to move boundaries according to selected Mk.
+- FloatingInfo: Saves acceleration data from new format of PartFloat.fbi4.
+- FloatingInfo: Supports PartFloatMotion.fbi4 with high frequency data.
+- FloatingInfo: PartMotion.fbi4 is used with -savemotion option improving the performance.
+- BIFileInfo: New tool to export structure and data of binary files.
+- MeasureTool: Computes Turbulent Kinetic Energy (TKE).
+General:
+- Ignores empty execution parameters to avoid problems and other improvements.
+  
+
+DualSPHysics Package v5.0 (24-07-2020) [NEW RELEASE]
+=====================================================
+Novelties in pre-processing tools:
+- New mode to create particles at free positions instead of following the cartesian grid
+- Definition of variables in the XML file that makes easier the particle generation of complex cases with GenCase and the configuration of DualSPHysics
+- Computation of normal vectors for boundary particles (to be used with new boundary conditions)
+- Option to create several layers of particles (to be used with new boundary conditions)
+Novelties simulating fluid-driven objects:
+- Problems dealing with objects with density very different from water are solved
+- Floating objects can be combined with imposed linear and angular velocity
+New SPH formulations:
+- Density Diffusion Term (DDT) [Fourtakas et al. 2019]
+- Modified Dynamic Boundary Conditions (mDBC) [English et al. 2019]
+Improvements in performance:
+- Both CPU and GPU implementations use now double precision for arrays of position and for updating magnitudes
+- GPU executions are more efficient using relative position of the particles instead of absolute position
+- Greater robustness, usability and efficiency of the inlet/outlet implementation
+New coupling with MoorDyn++ library:
+- Mooring lines can be simulated modelling axial elasticity and bottom friction
+- Several mooring lines can be connected to a floating device and a mooring line can be connected to different floating devices
+- Numerical tensions are solved at fairleads and anchor points
+- Maximum breaking tension can be also defined by the user
+New functionalities in the coupling with Project Chrono:
+- Collisions can be solved using non-smooth contacts or smooth contacts
+- Multicore implementation is now available for collisions
+- Springs can be simulated as linear dampers or using Coulomb friction
+- New constraints such as “pulleys” are now possible
+New rheology models, non-Newtonian formulations and multiphase flows:
+- Velocity gradients calculated by a finite differences method (FDM) or an SPH gradient
+- Explicit calculation of shear rates and apparent viscosity for non-Newtonian fluids
+- Viscous forces modelled by the [Morris et al. 1997] operator or the SPH deviatoric stress tensor
+- Combination of Newtonian and non-Newtonian fluids (Newtonian, dilatant and pseudo-plastic) using the generalised Herschel–Bulkley-Papanastasiou model
+- Capable of modelling Power law, Bingham and any other non-linear fluid
+- Platform for implementation of any non-Newtonian formulation
+- Up to nine different phases per simulation
+Improved documentation:
+- New structure of the online Documentation
+- XML_GUIDE for Open boundaries, Chrono, MoorDyn, mDBC and multi-phase
+
+
+DualSPHysics Package v5.0 beta (26-04-2020)
+=======================================
+- Inlet: Interpolated velocity with AWAS to generate waves.
+- AccInput: Supports a time interval for activation. 
+- AccInput: External linear and angular acceleration also for floating bodies.
+- BondaryVTK: Major improvements in performance.
+- Chrono: Smooth Contacts with OpenMP.
+
+
+DualSPHysics Package v5.0 beta (06-04-2020)
+============================================
+- Novelties in pre-processing tools
+  - New mode to create particles at free positions instead of following the cartesian grid
+  - Definition of variables in the XML file that makes easier the particle generation of complex cases with GenCase and the configuration of DualSPHysics
+  - Computation of normal vectors for boundary particles (to be used with new boundary conditions)
+  - Option to create several layers of particles (to be used with new boundary conditions)
+  
+- Novelties simulating fluid-driven objects
+  - Problems dealing with objects with density very different from water are solved
+  - Floating objects can be combined with imposed linear and angular velocity
+
+- New SPH formulations
+  - Density Diffusion Term (DDT) [Fourtakas et al. 2020]
+  - Modified Dynamic Boundary Conditions (mDBC) [English et al. 2019]
+
+- Improvements on performance
+  - GPU executions are more efficient using relative position of the particles instead of absolute position
+  - Greater robustness, usability and efficiency of the inlet/outlet implementation
+  
+- New coupling with MoorDyn++ library
+  - Mooring lines can be simulated modelling axial elasticity and bottom friction
+  - Several mooring lines can be connected to a floating device and a mooring line can be connected to different floating devices
+  - Numerical tensions are solved at fairleads and anchor points
+  - Maximum breaking tension can be also defined by the user
+
+- New functionalities in the coupling with Project Chrono
+  - Collisions can be solved using non-smooth contacts or smooth contacts
+  - Multicore implementation is now available for collisions
+  - Springs can be simulated as linear dampers or using Coulomb friction
+  - New constraints such as "pulleys" are now possible
+
+- New rheology models, non-Newtonian formulations and multiphase flows
+  - Velocity gradients calculated by a finite differences method (FDM) or an SPH gradient
+  - Explicit calculation of shear rates and apparent viscosity for non-Newtonian fluids
+  - Viscous forces modelled by the [Morris et al. 1997] operator or the SPH deviatoric stress tensor
+  - Combination of Newtonian and non-Newtonian fluids (Newtonian, dilatant and pseudo-plastic) using the generalised Herschel–Bulkley-Papanastasiou model
+  - Capable of modelling Power law, Bingham and any other non-linear fluid
+  - Platform for implementation of any non-Newtonian formulation
+  - Up to nine different phases per simulation
+  
+- Improved documentation
+  - New structure of the Documentation
+  - XML_GUIDE for Open boundaries, Chrono, MoorDyn, mDBC and multi-phase
+
+#########################################################################################  
+
+DualSPHysics Package v4.4 (12-02-2020)
+=======================================
+- Inlet: Fixed minor bug in system update step for inlet/outlet particles.
+- Several improvements in wave generation:
+  - Fixed bug when piston with AWAS does not start in x=0.
+  - Wave generation uses the gravity value of simulation.
+  - Several <savemotion> can be defined for each paddle.
+  - <savemotion> uses TimeMax and TimePart of the simulation by default.
+
+DualSPHysics Package v4.4 (19-01-2020)
+=======================================
+- Several improvements in inlet/outlet code:
+  - Three options for refilling mode (Simple-Full, Simple-Zsurf, Advanced).
+  - Three options for input treatment (No changes, Convert, Remove).
+  - Shows warnings for problematic combinations of configurations.
+  - Generates error for invalid combinations of configurations.
+  - Checks XML configuration.
+- GenCase: Improved numerical expression engine and other improvements.
+- Improves force computation using relative position (PosCell) instead of PosDouble on GPU.
+- New zones definition for Shifting application.
+- Allows for compilation without any precompiled library dependence: VtkLib (VTK format files), ChronoLib (Chrono coupling) and WaveGen (Wave-Paddles, Multi-Layer Pistons and Relaxation Zones).
+- New XML parameter FtIgnoreFtRadius to ignore floating radius according periodic dimension.
+- New XML parameter WrnPartsOut to active/disable warning according to number of out particles.
+
+DualSPHysics Package v4.4 (05-12-2019)
+=======================================
+- Several improvements in GenCase:
+  - Concave shapes are supported by drawpolygon, drawpyramid, drawprism and drawbeach.
+  - Fixed bug when gravity is zero and drawing some concave shapes.
+  - New operation <drawfilecsv> to draw bathymetry starting from a CSV file.
+  - Checks GenCase version according "requiredversion" in XML.
+  - Checks valid elements in XML operations.
+
+DualSPHysics Package v4.4 (12-11-2019)
+=======================================
+- Fixed bug in 1st order correction used in Inlet & BoundCorr features for 3D simulations.
+- Adds VS projects for CPU compilation without CUDA SDK installation.
+- GenCase: New XML operations <drawextrude> and <drawfilecsv>.
+
+DualSPHysics Package v4.4 (04-11-2019)
+=======================================
+- Removes CUDA library dependencies in LiquidGas and LiquidSediment approaches.
+- GenCase: New XML operations.
+
+DualSPHysics Package v4.4 (25-09-2019)
+=======================================
+- Improved scripts to launch the simulations.
+- Improved exception managment and other improvements in the code.
+- DeltaSPH parameter was replaced by DensityDT and DensityDTvalue parameters.
+- Fixed minor bug in Inlet code when userefilling=true on CPU.
+
+DualSPHysics Package v4.4 (23-06-2019)
+=======================================
+- Fixed bug in fun::::FileType() for files larger than 2GB.
+
+
+DualSPHysics Package v4.4 (18-06-2019)
+=======================================
+- Fixed bug in previous version using AWAS.
+- Check that the values read from XML are valid integer or real numbers.
+- PartVTK: New option -symparts to create mirrored particles for simulations with Symmetry.
+- GenCase: New option for drawing different layers in drawbox operation.
+- GenCase: New variant of <drawbox> using endpoint instead of size.
+
+
+DualSPHysics Package v4.4 (24-05-2019)
+=======================================
+- Symmetry in plane y=0 for CPU and GPU simulations on 3D. The code of gauges and post-processing tools were also upadated for symmetry calculations in the edge.
+- GenCase: New option AutoFill in <drawfilestl>, <drawfilevtk> and <drawfileply> to fill external geometries automatically.
+
+
+DualSPHysics Package v4.4 (11-04-2019)
+=======================================
+- Coupling with chrono
+  - Folder in examples\chrono
+  - XML templates in doc\xml_format: _FmtXML_Chrono.xml
+- Coupling with wave propagation models
+  - Folder in examples\wavecoupling
+  - XML templates in doc\xml_format: _FmtXML_MLPistons.xml & _FmtXML_RelaxationZones.xml
+- Open boundaries; inlet and outlet conditions
+  - Folder in examples\inletoutlet
+  - XML templates in doc\xml_format: _FmtXML_InOut.xml
+- Gauge system to measure water level, fluid velocity and forces during the simulation.
+- Several improvements in Chrono feature:
+  - Several links with the same bodies are allowed since the name is corrected automatically.
+  - PointLine link also defines not spheric joints using rotvector and rotvector2.
+  - Improved representation of PointLine link.
+- ReadSwash2: Allows the use of DYN as NONST in SWS files.
+- ComputeForces: Allows to compute moment about an axis.
+- Solitary waves: Generation using 3 different theorie & multiple solitary waves.
+- Damping: Saves VTK scheme of damping configuration and improves XML configuration to define domain for damping.  
+- Motion constraints for floating bodies using SPH, DEM or Chrono.  
+- Simulationdomain: New definition of domain limits.
+
+  
+DualSPHysics Package v4.2 (04-06-2018)
+=======================================
+- Updates Visual Studio project and makfiles for CUDA 9.2.
+- Code changes to improve compatibility with new features.
+- DualSPHysics output data directories are created automatically when necessary.
+- Updates post-processing tools for automatically creating the output directories
+- Updated examples using new features on automatic output directory creation.
+- Important improvements in wave generation:
+  - Computes X-velocity for irregular 2nd order waves.
+  - Velocity for regular waves 1st and 2nd order using flaps is saved in CSV files.
+  - The theory for 2nd order irregular waves using flap was implemented.
+- Minor fixes:
+  - CaseDambreak_FileBoxes.txt
+  - Fixed Makefiles for Linux when gcc 5 is used.
+  - EXP_FloatingWavesVal_Hadzic_et_al_2005.ods
+
+  
+DualSPHysics Package v4.2 (11-05-2018)
+=======================================
+- New structure of package (now linux and windows in only one package)
+- Multiphase code: LiquidGas
+  - Source code and examples
+- New capacity to simulate up to 65,000 floating or moving bodies
+  - Pre-processing and post-processing tools are adapted to this
+  - Compiling option for this functionality
+- Wave generation and absorption
+  - 2nd Order Stokes: piston and flap
+  - Passive absorption using sponge layers
+  - Active absorption: AWAS for piston
+- New test cases (all can be visualised in Youtube)
+  - Poiseuille flow
+  - Many floating objects
+  - Dike with AWAS where overtopping is computed
+- New post-processing tools
+  - FlowTool.exe; to compute inflow, outflow… overtopping!
+  - IsoSurface.exe; now also creates slices
+- Graphical User Interface using FreeCAD
+  - DesignSPHysics: http://design.sphysics.org/
+- Advanced visualisation using Blender
+  - VisualSPHysics: http://visual.sphysics.org/
+- Other changes
+  - Several bugs are solved: shifting correction and others reported by users
+  - CUDA 9.1
+  - Visual Studio Community 2015 (free)
+  - Improvements in the code documentation (WIKI)
+  - Improved implementation of floating objects to facilitate coupling with other models
+  - New functionalities in the XML of GenCase to create more complex cases
+  - New output VTK file 1000 times less heavy to easily visualise huge cases
+-  New license of the code: LGPL v2.1- GNU Lesser General Public License (LGPL)
+  - Software can be incorporated into both free software and proprietary software
+  - Developers and companies can integrate LGPL software into their software without being required to release the source code of their own software-parts
+  - Libraries linked to DualSPHysics can be closed source
+  - LGPL can be used in commercial applications
+  

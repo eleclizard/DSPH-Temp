@@ -1,0 +1,180 @@
+
+
+ <DUALSPHYSICS5> Copyright (c) 2020 by
+ Dr Jose M. Dominguez Alonso, Dr Alejandro Crespo,
+ Prof. Moncho Gomez Gesteira, Prof. Benedict Rogers,
+ Dr Georgios Fourtakas, Prof. Peter Stansby,
+ Dr Renato Vacondio, Dr Corrado Altomare, Dr Angelo Tafuni,
+ Orlando Garcia Feal, Ivan Martinez Estevez
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+
+DualSPHysics5 v5.0.175 (21-02-2021)
+====================================
+[Select CUDA Device]
+[CUDA Capable device(s)]
+  Detected 1 CUDA Capable device(s)
+  CUDA Driver Version / Runtime Version: 11.3 / 11.3
+ 
+Device 0: "NVIDIA GeForce GTX 1050"
+  CUDA Capability Major....: 6.1
+  Global memory............: 3072 MBytes
+  CUDA Cores...............: 768 ( 6 Multiprocessors, 128 CUDA Cores/MP)
+  GPU Max Clock rate.......: 1442 MHz (1.44 GHz)
+  Memory Clock rate........: 3504 Mhz
+  Memory Bus Width.........: 96-bit
+  L2 Cache Size............: 768 KBytes
+  Constant memory..........: 64 KBytes
+  Shared memory per block..: 48 KBytes
+  Registers per block......: 65536
+  Maximum threads per MP...: 2048
+  Maximum threads per block: 1024
+  Concurrent copy and kernel execution....: Yes with 5 copy engine(s)
+  Run time limit on kernels...............: Yes
+  Integrated GPU sharing Host Memory......: No
+  Support host page-locked memory mapping.: Yes
+  Device has ECC support..................: Disabled
+  CUDA Device Driver Mode (TCC or WDDM)...: WDDM (Windows Display Driver Model)
+  Device supports Unified Addressing (UVA): Yes
+  Device PCI (Domain / Bus / location)....: 0 / 1 / 0
+  Device supports P2P and RDMA............: No
+ 
+[GPU Hardware]
+Device default: 0  "NVIDIA GeForce GTX 1050"
+Compute capability: 6.1
+Memory global: 3072 MB
+Memory shared: 49152 Bytes
+[Initialising JSphGpuSingle  05-05-2021 18:08:49]
+ProgramFile=".../bin/windows/DualSPHysics5.0_win64.exe"
+ExecutionDir=".../source/out/Debug"
+XmlFile=".../Debug/SPH_dev_Temperature_CPU_out/SPH_dev_Temperature_CPU.xml"
+OutputDir=".../out/Debug/SPH_dev_Temperature_CPU_out"
+OutputDataDir=".../Debug/SPH_dev_Temperature_CPU_out/data"
+XML-App: GenCase v5.0.229 (29-01-2021)
+XML-Vars (uservars + ctes): CaseName=["SPH_dev_Temperature_CPU"]  Data2D=[1]  Data2DPosy=[0]  H=[0.00169706]  KernelSize=[0.00339411]  B=[4.48457e+06]  Gamma=[7]  Rhop0=[1000]  Dp=[0.001]  Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[-9.81]  MassFluid=[0.001]  MassBound=[0.001]
+XML-Vars (parameters): TimeMax=[10]  TimeOut=[0.01]
+**Basic case configuration is loaded
+**Special case configuration is loaded
+Loading initial state of particles...
+Loaded particles: 8221
+MapRealPos(border)=(-8.48528e-05,-8.48528e-05,-8.48528e-05)-(0.100085,8.48528e-05,0.100085)
+MapRealPos(final)=(-8.48528e-05,-8.48528e-05,-8.48528e-05)-(0.100085,8.48528e-05,0.100085)
+**Initial state of particles is loaded
+**2D-Simulation parameters:
+CaseName="SPH_dev_Temperature_CPU"
+RunName="SPH_dev_Temperature_CPU"
+Simulate2DPosY=0
+Symmetry=False
+SavePosDouble=False
+SaveFtAce=False
+SvTimers=True
+Boundary="DBC"
+StepAlgorithm="Symplectic"
+Kernel="CubicSpline"
+  Cubic.a1=0.4547284
+  Cubic.aa=9.303865e+07
+  Cubic.a24=39472.95
+  Cubic.c1=-2.791159e+08
+  Cubic.c2=-6.977898e+07
+  Cubic.d1=2.093370e+08
+  Cubic.od_wdeltap=1.140021e-05
+Viscosity="Artificial"
+  Visco=0.01
+  ViscoBoundFactor=1
+DensityDiffusion="None"
+Shifting="None"
+RigidAlgorithm="None"
+FloatingCount=0
+CaseNp=8221
+CaseNbound=301
+CaseNfixed=301
+CaseNmoving=0
+CaseNfloat=0
+CaseNfluid=7920
+PeriodicActive="None"
+Dp=0.001
+KernelH=0.001697  (CoefficientH=1.2; H/Dp=1.69706)
+KernelSize=0.003394112
+CteB=4484572
+Gamma=7
+RhopZero=1000
+Cs0=177.1778781338122
+CFLnumber=0.2
+DtIni=9.578262513186214e-06
+DtMin=4.789131327956724e-07
+DtAllParticles=False
+MassFluid=0.001
+MassBound=0.001
+TimeMax=10
+TimePart=0.01
+Gravity=(0,0,-9.81)
+NpMinimum=301
+RhopOut=True
+RhopOutMin=700
+RhopOutMax=1300
+WrnPartsOut=True
+HeatTransfer=True
+HeatCpFluid=4182
+HeatCpBound=871
+HeatKFluid=0.6
+HeatKBound=202.4
+MkConstTempWall=0
+HeatTempBound=363
+HeatTempFluid=293
+DensityBound=2719
+**Requested GPU memory for 8349 particles: 1.6 MB (0 times).
+CellMode="Full"
+ScellDiv=1
+MapCells=(30,1,30)
+CellDomFixed=False
+DomCells=(30,1,30)
+DomCellCode="13_9_11"
+PosCellCode="13_10_9 (8192,1024,512)"
+PosCellSize=0.003394  (1 x KernelSize)
+ 
+BlockSize calculation mode: Fixed.
+  BsForcesBound=128 (48 regs)
+  BsForcesFluid=128 (64 regs)
+ 
+**CellDiv: Requested gpu memory for 8760 particles: 0.1 MB.
+**CellDiv: Requested gpu memory for 1612 cells (CellMode=Full): 0.0 MB.
+ 
+RunMode="Pos-Cell - Single-Gpu"
+ 
+Particle summary:
+  Fixed....: 301  id:(0-300)   MKs:1 (10)
+  Moving...: 0
+  Floating.: 0
+  Fluid....: 7920  id:(301-8220)   MKs:1 (1)
+
+Total particles: 8221 (bound=301 (fx=301 mv=0 ft=0) fluid=7920)
+Total MK blocks: 2 (bound=1 (fx=1 mv=0 ft=0) fluid=1)
+ 
+
+*** WARNING: The kernel Cubic Spline is not available in GaugeSystem, so kernel Wendland is used.
+
+Allocated memory in CPU: 931074 (0.89 MB)
+Allocated memory in GPU: 1734204 (1.65 MB)
+Part_0000        8221 particles successfully stored
+
+[WARNINGS]
+1. The kernel Cubic Spline is not available in GaugeSystem, so kernel Wendland is used.
+
+[Initialising simulation (ek7qu1ab)  05-05-2021 18:08:49]
+PART       PartTime      TotalSteps    Steps    Time/Sec   Finish time        
+=========  ============  ============  =======  =========  ===================

@@ -1,0 +1,369 @@
+
+
+ <DUALSPHYSICS5> Copyright (c) 2020 by
+ Dr Jose M. Dominguez Alonso, Dr Alejandro Crespo,
+ Prof. Moncho Gomez Gesteira, Prof. Benedict Rogers,
+ Dr Georgios Fourtakas, Prof. Peter Stansby,
+ Dr Renato Vacondio, Dr Corrado Altomare, Dr Angelo Tafuni,
+ Orlando Garcia Feal, Ivan Martinez Estevez
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+
+DualSPHysics5 v5.0.140 (18-07-2020)
+====================================
+[Select CUDA Device]
+[CUDA Capable device(s)]
+  Detected 1 CUDA Capable device(s)
+  CUDA Driver Version / Runtime Version: 10.2 / 9.2
+ 
+Device 0: "GeForce GTX 1050"
+  CUDA Capability Major....: 6.1
+  Global memory............: 3072 MBytes
+  CUDA Cores...............: 768 ( 6 Multiprocessors, 128 CUDA Cores/MP)
+  GPU Max Clock rate.......: 1442 MHz (1.44 GHz)
+  Memory Clock rate........: 3504 Mhz
+  Memory Bus Width.........: 96-bit
+  L2 Cache Size............: 768 KBytes
+  Constant memory..........: 64 KBytes
+  Shared memory per block..: 48 KBytes
+  Registers per block......: 65536
+  Maximum threads per MP...: 2048
+  Maximum threads per block: 1024
+  Concurrent copy and kernel execution....: Yes with 5 copy engine(s)
+  Run time limit on kernels...............: No
+  Integrated GPU sharing Host Memory......: No
+  Support host page-locked memory mapping.: Yes
+  Device has ECC support..................: Disabled
+  CUDA Device Driver Mode (TCC or WDDM)...: WDDM (Windows Display Driver Model)
+  Device supports Unified Addressing (UVA): Yes
+  Device PCI (Domain / Bus / location)....: 0 / 1 / 0
+  Device supports P2P and RDMA............: No
+ 
+[GPU Hardware]
+Device default: 0  "GeForce GTX 1050"
+Compute capability: 6.1
+Memory global: 3072 MB
+Memory shared: 49152 Bytes
+[Initialising JSphGpuSingle  28-07-2020 12:59:22]
+ProgramFile=".../bin/windows/DualSPHysics5.0_win64.exe"
+ExecutionDir=".../examples/others/Restart"
+XmlFile=".../Restart/CaseOpenFtMove_out/CaseOpenFtMove.xml"
+OutputDir=".../others/Restart/CaseOpenFtMove_out"
+OutputDataDir=".../Restart/CaseOpenFtMove_out/data"
+XML-Vars (uservars + ctes): CaseName=["CaseOpenFtMove"]  Data2D=[1]  Data2DPosy=[0]  H=[0.0282843]  KernelSize=[0.0565685]  B=[549360]  Gamma=[7]  Rhop0=[1000]  Dp=[0.02]  Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[-9.81]  MassFluid=[0.4]  MassBound=[0.4]
+XML-Vars (parameters): TimeMax=[1]  TimeOut=[0.01]
+**Basic case configuration is loaded
+**Special case configuration is loaded
+Loading initial state of particles...
+Loaded particles: 7701
+MapRealPos(border)=(-0.01,-0.00141421,-0.00141421)-(3.01,0.00141421,1.00141)
+MapRealPos(final)=(-0.01,-0.00141421,-0.00141421)-(3.01,0.00141421,2.00424)
+**Initial state of particles is loaded
+**2D-Simulation parameters:
+CaseName="CaseOpenFtMove"
+RunName="CaseOpenFtMove"
+Simulate2DPosY=0
+Symmetry=False
+SavePosDouble=False
+SaveFtAce=False
+SvTimers=True
+PIPS-steps=100
+Boundary="DBC"
+StepAlgorithm="Verlet"
+  VerletSteps=40
+Kernel="Wendland"
+  Wendland.awen=696.250061
+  Wendland.bwen=-123089.625000
+Viscosity="Artificial"
+  Visco=0.020000
+  ViscoBoundFactor=1.000000
+DensityDiffusion="Fourtakas et al 2019 (inner)"
+  DensityDiffusionValue=0.100000
+Shifting="None"
+RigidAlgorithm="SPH+DCDEM"
+FloatingCount=3
+FtPause=0.000000
+FtConstraints=False
+FtIgnoreRadius=False
+CaseNp=7701
+CaseNbound=333
+CaseNfixed=151
+CaseNmoving=44
+CaseNfloat=138
+CaseNfluid=7368
+PeriodicActive="Axis-X"
+PeriodicXinc=(-3.02,0,0)
+Dp=0.02
+KernelH=0.028284  (CoefficientH=1; H/Dp=1.41421)
+KernelSize=0.056569
+CteB=549360.000000
+Gamma=7.000000
+RhopZero=1000.000000
+Cs0=62.0123
+CFLnumber=0.200000
+DtIni=0.000456108
+DtMin=2.28054e-05
+DtAllParticles=False
+MassFluid=0.400000
+MassBound=0.400000
+Coefficients for DEM:
+  Object Fixed  mkbound:0  mk:10
+    Young_Modulus: 2.1e+11
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.7
+  Object Moving  mkbound:1  mk:11
+    Young_Modulus: 2.1e+11
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.7
+  Object Floating  mkbound:2  mk:12
+    Young_Modulus: 2.1e+11
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.7
+  Object Floating  mkbound:3  mk:13
+    Young_Modulus: 3e+09
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.6
+  Object Floating  mkbound:4  mk:14
+    Young_Modulus: 3e+09
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.6
+FtPause=0.000000
+TimeMax=1
+TimePart=0.01
+Gravity=(0.000000,0.000000,-9.810000)
+NpMinimum=333
+RhopOut=True
+RhopOutMin=700.000000
+RhopOutMax=1300.000000
+WrnPartsOut=True
+**Requested GPU memory for 7829 particles: 1.2 MB (0 times).
+CellMode="Full"
+ScellDiv=1
+MapCells=(56,1,36)
+DomCells=(56,1,36)
+DomCellCode="13_8_12"
+PosCellCode="13_10_9 (8192,1024,512)"
+PosCellSize=0.056569  (1 x KernelSize)
+ 
+BlockSize calculation mode: Fixed.
+  BsForcesBound=128 (48 regs)
+  BsForcesFluid=128 (60 regs)
+  BsForcesDem=128 (56 regs)
+ 
+**JSphGpu: Requesting gpu memory for 8220 particles: 1.3 MB.
+**CellDiv: Requested gpu memory for 8535 particles: 0.1 MB.
+**CellDiv: Requested gpu memory for 2166 cells (CellMode=Full): 0.0 MB.
+ 
+RunMode="Pos-Cell - Single-Gpu"
+ 
+Particle summary:
+  Fixed....: 151  id:(0-150)   MKs:1 (10)
+  Moving...: 44  id:(151-194)   MKs:1 (11)
+  Floating.: 138  id:(195-332)   MKs:3 (12-14)
+  Fluid....: 7368  id:(333-7700)   MKs:1 (1)
+
+Total particles: 7701 (bound=333 (fx=151 mv=44 ft=138) fluid=7368)
+Total MK blocks: 6 (bound=5 (fx=1 mv=1 ft=3) fluid=1)
+ 
+Allocated memory in CPU: 786540 (0.75 MB)
+Allocated memory in GPU: 1519795 (1.45 MB)
+Part_0000        7701 particles successfully stored
+
+[Initialising simulation (1wdgvduj)  28-07-2020 12:59:22]
+PART       PartTime      TotalSteps    Steps    Time/Sec   Finish time        
+=========  ============  ============  =======  =========  ===================
+**JSphGpu: Requesting gpu memory for 8856 particles: 1.4 MB.
+**CellDiv: Requested gpu memory for 8663 particles: 0.1 MB.
+**CellDiv: Requested gpu memory for 2166 cells (CellMode=Full): 0.0 MB.
+Part_0001      0.010019           110      110      26.96  28-07-2020 12:59:48
+Part_0002      0.020045           220      110      26.61  28-07-2020 12:59:48
+Part_0003      0.030065           330      110      29.91  28-07-2020 12:59:50
+Part_0004      0.040080           440      110      27.36  28-07-2020 12:59:49
+Part_0005      0.050089           550      110      25.94  28-07-2020 12:59:49
+Part_0006      0.060004           659      109      27.52  28-07-2020 12:59:48
+Part_0007      0.070006           769      110      28.58  28-07-2020 12:59:49
+Part_0008      0.080004           879      110      26.87  28-07-2020 12:59:49
+Part_0009      0.090085           990      111      28.52  28-07-2020 12:59:49
+Part_0010      0.100068          1100      110      27.49  28-07-2020 12:59:49
+Part_0011      0.110045          1210      110      28.64  28-07-2020 12:59:49
+Part_0012      0.120019          1320      110      27.08  28-07-2020 12:59:49
+Part_0013      0.130082          1431      111      26.76  28-07-2020 12:59:48
+Part_0014      0.140035          1541      110      28.08  28-07-2020 12:59:49
+Part_0015      0.150078          1652      111      28.15  28-07-2020 12:59:49
+Part_0016      0.160042          1762      110      26.71  28-07-2020 12:59:49
+Part_0017      0.170089          1873      111      26.95  28-07-2020 12:59:49
+Part_0018      0.180033          1983      110      28.99  28-07-2020 12:59:49
+Part_0019      0.190057          2094      111      28.96  28-07-2020 12:59:49
+Part_0020      0.200068          2205      111      30.04  28-07-2020 12:59:49
+Part_0021      0.210058          2316      111      27.91  28-07-2020 12:59:49
+Part_0022      0.220047          2427      111      29.80  28-07-2020 12:59:49
+Part_0023      0.230036          2538      111      27.71  28-07-2020 12:59:49
+Part_0024      0.240017          2649      111      28.88  28-07-2020 12:59:50
+Part_0025      0.250074          2761      112      28.32  28-07-2020 12:59:49
+Part_0026      0.260058          2872      111      28.59  28-07-2020 12:59:49
+Part_0027      0.270042          2983      111      28.30  28-07-2020 12:59:49
+Part_0028      0.280027          3094      111      29.75  28-07-2020 12:59:50
+Part_0029      0.290052          3206      112      34.04  28-07-2020 12:59:50
+Part_0030      0.300086          3318      112      28.52  28-07-2020 12:59:49
+Part_0031      0.310048          3429      111      27.55  28-07-2020 12:59:50
+Part_0032      0.320088          3541      112      31.47  28-07-2020 12:59:50
+Part_0033      0.330013          3652      111      29.78  28-07-2020 12:59:50
+Part_0034      0.340052          3764      112      28.92  28-07-2020 12:59:49
+Part_0035      0.350031          3876      112      28.85  28-07-2020 12:59:50
+Part_0036      0.360068          3989      113      30.30  28-07-2020 12:59:50
+Part_0037      0.370087          4101      112      27.07  28-07-2020 12:59:49
+Part_0038      0.380069          4213      112      28.52  28-07-2020 12:59:50
+Part_0039      0.390050          4325      112      29.57  28-07-2020 12:59:50
+Part_0040      0.400062          4437      112      28.84  28-07-2020 12:59:50
+Part_0041      0.410086          4550      113      29.02  28-07-2020 12:59:50
+Part_0042      0.420061          4662      112      29.09  28-07-2020 12:59:50
+Part_0043      0.430017          4774      112      28.27  28-07-2020 12:59:50
+Part_0044      0.440009          4887      113      29.95  28-07-2020 12:59:49
+Part_0045      0.450032          5000      113      27.67  28-07-2020 12:59:50
+Part_0046      0.460008          5113      113      28.50  28-07-2020 12:59:50
+Part_0047      0.470078          5228      115      29.50  28-07-2020 12:59:50
+Part_0048      0.480067          5341      113      28.22  28-07-2020 12:59:50
+Part_0049      0.490020          5453      112      29.16  28-07-2020 12:59:50
+Part_0050      0.500056          5566      113      27.40  28-07-2020 12:59:50
+Part_0051      0.510061          5679      113      31.14  28-07-2020 12:59:50
+Part_0052      0.520034          5792      113      29.72  28-07-2020 12:59:50
+Part_0053      0.530030          5905      113      30.99  28-07-2020 12:59:50
+Part_0054      0.540053          6019      114      30.07  28-07-2020 12:59:50
+Part_0055      0.550058          6133      114      27.76  28-07-2020 12:59:50
+Part_0056      0.560086          6249      116      31.62  28-07-2020 12:59:50
+Part_0057      0.570007          6362      113      29.13  28-07-2020 12:59:50
+Part_0058      0.580088          6476      114      28.82  28-07-2020 12:59:50
+Part_0059      0.590041          6588      112      28.95  28-07-2020 12:59:50
+Part_0060      0.600055          6704      116      30.72  28-07-2020 12:59:50
+Part_0061      0.610005          6818      114      29.32  28-07-2020 12:59:50
+Part_0062      0.620021          6932      114      29.16  28-07-2020 12:59:50
+Part_0063      0.630076          7046      114      29.00  28-07-2020 12:59:50
+Part_0064      0.640045          7160      114      29.36  28-07-2020 12:59:50
+Part_0065      0.650014          7276      116      29.71  28-07-2020 12:59:51
+Part_0066      0.660042          7393      117      31.77  28-07-2020 12:59:50
+Part_0067      0.670063          7509      116      29.16  28-07-2020 12:59:50
+Part_0068      0.680017          7625      116      32.16  28-07-2020 12:59:50
+Part_0069      0.690058          7740      115      29.75  28-07-2020 12:59:50
+Part_0070      0.700004          7855      115      32.25  28-07-2020 12:59:50
+Part_0071      0.710068          7969      114      30.48  28-07-2020 12:59:50
+Part_0072      0.720067          8084      115      30.82  28-07-2020 12:59:51
+Part_0073      0.730005          8198      114      30.72  28-07-2020 12:59:50
+Part_0074      0.740031          8313      115      30.38  28-07-2020 12:59:50
+Part_0075      0.750034          8429      116      31.23  28-07-2020 12:59:51
+Part_0076      0.760022          8544      115      31.43  28-07-2020 12:59:50
+Part_0077      0.770025          8660      116      29.12  28-07-2020 12:59:50
+Part_0078      0.780052          8776      116      32.22  28-07-2020 12:59:51
+Part_0079      0.790022          8891      115      31.42  28-07-2020 12:59:51
+Part_0080      0.800072          9007      116      35.27  28-07-2020 12:59:50
+Part_0081      0.810083          9124      117      28.73  28-07-2020 12:59:51
+Part_0082      0.820066          9242      118      34.28  28-07-2020 12:59:51
+Part_0083      0.830086          9360      118      29.85  28-07-2020 12:59:50
+Part_0084      0.840063          9477      117      29.00  28-07-2020 12:59:50
+Part_0085      0.850011          9594      117      29.34  28-07-2020 12:59:51
+Part_0086      0.860013          9711      117      31.03  28-07-2020 12:59:51
+
+*** WARNING: 1 DTs adjusted to DtMin (t:0.867093, nstep:9794)
+
+
+*** WARNING: 10 DTs adjusted to DtMin (t:0.867299, nstep:9803)
+
+
+*** WARNING: 100 DTs adjusted to DtMin (t:0.869351, nstep:9893)
+
+Part_0087      0.870012          9922      211      51.65  28-07-2020 12:59:51
+Part_0088      0.880001         10360      438     103.81  28-07-2020 12:59:52
+Part_0089      0.890018         10687      327      79.65  28-07-2020 12:59:52
+
+*** WARNING: 1000 DTs adjusted to DtMin (t:0.893521, nstep:10835)
+
+Part_0090      0.900021         11120      433     104.02  28-07-2020 12:59:53
+Part_0091      0.910010         11558      438     105.69  28-07-2020 12:59:54
+Part_0092      0.920021         11997      439     105.91  28-07-2020 12:59:55
+Part_0093      0.930010         12435      438     105.92  28-07-2020 12:59:56
+Part_0094      0.940022         12874      439     107.23  28-07-2020 12:59:57
+Part_0095      0.950010         13312      438     109.27  28-07-2020 12:59:57
+Part_0096      0.960022         13751      439     105.07  28-07-2020 12:59:58
+Part_0097      0.970011         14189      438     115.41  28-07-2020 12:59:59
+Part_0098      0.980022         14628      439     105.07  28-07-2020 12:59:59
+Part_0099      0.990011         15066      438     107.71  28-07-2020 13:00:00
+Part_0100      1.000023         15505      439     111.38  28-07-2020 13:00:01
+
+[Simulation finished  28-07-2020 13:00:01]
+Particles of simulation (initial): 7701
+DTs adjusted to DtMin............: 5669
+Excluded particles...............: 0
+Total Runtime....................: 39.547821 sec.
+Simulation Runtime...............: 39.425262 sec.
+Runtime per physical second......: 39.424374 sec.
+Steps per second.................: 393.275757
+Steps of simulation..............: 15505
+Particle Interactions Per Second.: 0.06944112 GPIPS
+Total particle interactions (f+b): 2.73773444 GPIs (2.7098e+09 + 2.7981e+07)
+PART files.......................: 101
+Maximum number of particles......: 8007
+Maximum number of cells..........: 1120
+CPU Memory.......................: 843780 (0.80 MB)
+GPU Memory.......................: 1622579 (1.55 MB)
+ 
+[GPU Timers]
+VA-Init..........................: 0.058940 sec.
+NL-Limits........................: 3.528960 sec.
+NL-PreSort.......................: 0.075632 sec.
+NL-RadixSort.....................: 2.666869 sec.
+NL-CellBegin.....................: 2.718245 sec.
+NL-SortData......................: 1.643794 sec.
+NL-OutCheck......................: 0.037945 sec.
+CF-PreForces.....................: 2.185824 sec.
+CF-Forces........................: 5.913009 sec.
+SU-Shifting......................: 0.000000 sec.
+SU-ComputeStep...................: 0.466101 sec.
+SU-Floating......................: 1.532189 sec.
+SU-Motion........................: 1.295402 sec.
+SU-Periodic......................: 4.113296 sec.
+SU-ResizeNp......................: 0.003081 sec.
+SU-DownData......................: 0.057240 sec.
+SU-SavePart......................: 0.000257 sec.
+SU-Chrono........................: 0.000000 sec.
+SU-BoundCorr.....................: 0.000000 sec.
+SU-InOut.........................: 0.000000 sec.
+ 
+[Output files]
+- CfgInit_Domain.vtk...: Saves the limits of the case and the simulation domain limits.
+- CfgInit_MapCells.vtk.: Saves the cell division of the simulation domain.
+- Run.csv..............: One line CSV file with execution parameters and other simulation data.
+- Run.out..............: Log file of the simulation.
+- data/PartFloat.fbi4..: Binary file with floating body information for each instant (input for FloatingInfo program).
+- data/PartInfo.ibi4...: Binary file with execution information for each instant (input for PartInfo program).
+- data/PartOut_???.obi4: Binary file with particles excluded during simulation (input for PartVtkOut program).
+- data/Part_????.bi4...: Binary file with particle data in different instants.
+- data/Part_Head.ibi4..: Binary file with basic information of simulation data.
+ 
+[WARNINGS]
+1. 1 DTs adjusted to DtMin (t:0.867093, nstep:9794)
+2. 10 DTs adjusted to DtMin (t:0.867299, nstep:9803)
+3. 100 DTs adjusted to DtMin (t:0.869351, nstep:9893)
+4. 1000 DTs adjusted to DtMin (t:0.893521, nstep:10835)
+ 
+
+Finished execution (code=0).
+

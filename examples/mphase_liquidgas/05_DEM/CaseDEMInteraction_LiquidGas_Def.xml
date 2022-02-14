@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase4 v4.0.068 (27-04-2018)" date="02-05-2018 20:09:43">
+    <casedef>
+        <constantsdef>
+            <lattice bound="1" fluid="1" />
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000" comment="Reference density of the fluid" units_comment="kg/m^3" />%Not used for liquid-gas flows. Set in the properties section for each material.
+            <hswl value="0" auto="true" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" />%Not used for liquid-gas flows.
+            <gamma value="7" comment="Polytropic constant for water used in the state equation" />%Not used for liquid-gas flows. Set in the properties section for each material.
+            <speedsystem value="0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" />%Not used for liquid-gas flows.
+            <coefsound value="15" comment="Coefficient to multiply speedsystem" />%Not used for liquid-gas flows.
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />%Not used for liquid-gas flows. Set in the properties section for each material.
+            <coefh value="1.0" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
+            <cflnumber value="0.2" comment="Coefficient to multiply dt" />
+        </constantsdef>
+        <mkconfig boundcount="240" fluidcount="9">
+            <mkorientfluid mk="0" orient="Xyz" />
+            <mkorientfluid mk="1" orient="Xyz" />
+        </mkconfig>
+        <geometry>
+            <definition dp="0.01" units_comment="metres (m)">
+                <pointmin x="-0.05" y="-0.05" z="-0.05" />
+                <pointmax x="2" y="1" z="1" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>real | bound</setshapemode>
+                    <setdrawmode mode="full" />
+                    <setmkfluid mk="0" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0" y="0" z="0" />
+                        <size x="0.4" y="0.67" z="0.3" />
+                    </drawbox>
+                    <setmkbound mk="0" />
+                    <drawbox>
+                        <boxfill>all</boxfill>
+                        <point x="0" y="0" z="0" />
+                        <size x="1.6" y="0.67" z="0.4" />
+                    </drawbox>
+                    <move x="0" y="0" z="0.0085" />
+                    <setmkbound mk="51" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.05" z="0.0" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="52" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.2" z="0.0" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="53" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.35" z="0.0" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="54" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.5" z="0.0" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="55" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.12" z="0.05" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="56" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.27" z="0.05" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="57" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.42" z="0.05" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="58" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.19" z="0.1" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="59" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.6" y="0.32" z="0.1" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="60" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.05" z="0.0" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="61" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.2" z="0.0" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="62" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.35" z="0.0" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="63" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.5" z="0.0" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="64" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.12" z="0.05" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="65" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.27" z="0.05" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="66" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.42" z="0.05" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="67" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.19" z="0.1" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkbound mk="68" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.3" y="0.32" z="0.1" />
+                        <size x="0.05" y="0.1" z="0.05" />
+                    </drawbox>
+                    <setmkfluid mk="1" />
+                    <fillbox x="0.8" y="0.2" z="0.3">
+                        <modefill>void</modefill>
+                        <point x="0.0" y="0.0" z="-1.0" />
+                        <size x="1.6" y="0.67" z="1.5" />
+                    </fillbox>
+                    <shapeout file="" reset="true" />
+                </mainlist>
+            </commands>
+        </geometry>
+        <floatings>
+            <floating mkbound="51-68" relativeweight="1.25" property="hard-wood" />
+        </floatings>
+        <properties>%Material properties for liquid-gas flows are set here.
+            <propertyfile file="Floating_Materials.xml" path="materials" />
+            <property name="userdef01" Restitution_Coefficient_User="0.65" comment="User redefinition for Restitution Coefficient (-)" />
+            <property name="water">
+                <rhop0 value="1000" />
+                <gamma value="7" />
+                <cs0 value="50" />
+                <visco value="0.05" />
+                <phasetype value="0" />
+                <surfcoef value="0" />
+            </property>
+            <property name="air">
+                <rhop0 value="1.18" />
+                <gamma value="1.4" />
+                <cs0 value="200" />
+                <visco value="0.05" />
+                <phasetype value="1" />
+                <surfcoef value="0" />
+            </property>
+            <links>
+                <link mkbound="0" property="steel + userdef01 + water" comment="Property for the tank" />
+                <link mkbound="51-68" property="water + hard-wood" comment="Apply properties needed for the multi-phase simulation to floating materials" />
+                <link mkfluid="0" property="water" />
+                <link mkfluid="1" property="air" />
+            </links>
+        </properties>
+    </casedef>
+    <execution>
+        <parameters>
+            <parameter key="PosDouble" value="1" comment="Precision in particle interaction 0:Simple, 1:Double, 2:Uses and saves double (default=0)" />
+            <parameter key="FlowType" value="2" comment="Select Single-phase (1) or multi-phase flow(2)" />
+            <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (def=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Eulerian equations (def=40)" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (def=1)" />
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity Formulation 1:Artificial, 2:Laminar+SPS (def=1)" />
+            <parameter key="Visco" value="0.0" comment="Viscosity value" />
+            <parameter key="ViscoBoundFactor" value="1" comment="Multiply viscosity value with boundary (default=1)" />
+            <parameter key="DeltaSPH" value="0.1" comment="DeltaSPH value, 0.1 is the typical value, with 0 disabled (def=0)" />
+            <parameter key="Shifting" value="1" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
+            <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
+            <parameter key="ShiftTFS" value="1.5" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
+            <parameter key="MPCoefficient" value="0.1" comment="Colagrossi and Landrini multiphase coefficient." />
+            <parameter key="RigidAlgorithm" value="2" comment="Rigid Algorithm 0:collision-free, 1:SPH, 2:DEM (default=1)" />
+            <parameter key="FtPause" value="0.01" comment="Time to freeze the floatings at simulation start (warmup) (def=0)" />
+            <parameter key="DtIni" value="0.00001" comment="Initial time step" />
+            <parameter key="DtMin" value="0.0000001" comment="Minimum time step (def=0.00001)" />
+            <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
+            <parameter key="TimeMax" value="2" comment="Time of simulation" />
+            <parameter key="TimeOut" value="0.01" comment="Time between output files" />
+            <parameter key="IncZ" value="0.2" comment="Increase of Z+" />
+            <parameter key="PartsOutMax" value="1" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
+            <parameter key="RhopOutMin" value="0" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
+        </parameters>
+        <particles np="441542" nb="46310" nbf="39602" mkboundfirst="11" mkfluidfirst="1">
+            <_summary>
+                <fixed count="39602" id="0-39601" mkcount="1" mkvalues="11" />
+                <floating count="6708" id="39602-46309" mkcount="18" mkvalues="62-79" />
+                <fluid count="395232" id="46310-441541" mkcount="2" mkvalues="1-2" />
+            </_summary>
+            <fixed mkbound="0" mk="11" begin="0" count="39602" property="steel+userdef01+water" />
+            <floating mkbound="51" mk="62" begin="39602" count="372" property="hard-wood+water">
+                <massbody value="0.465" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.0977419" z="0.0333871" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000576544" v12="3.79471e-21" v13="-1.0842e-21" />
+                    <values v21="3.79471e-21" v22="0.00026004" v23="2.79435e-05" />
+                    <values v31="-1.0842e-21" v32="2.79435e-05" v33="0.000587754" />
+                </inertia>
+            </floating>
+            <floating mkbound="52" mk="63" begin="39974" count="354" property="hard-wood+water">
+                <massbody value="0.4425" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.249661" z="0.0320339" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000524619" v12="-7.69784e-20" v13="-1.35525e-21" />
+                    <values v21="-7.69784e-20" v22="0.000236732" v23="4.19492e-06" />
+                    <values v31="-1.35525e-21" v32="4.19492e-06" v33="0.000546012" />
+                </inertia>
+            </floating>
+            <floating mkbound="53" mk="64" begin="40328" count="354" property="hard-wood+water">
+                <massbody value="0.4425" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.399661" z="0.0320339" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000524619" v12="2.87314e-20" v13="-1.35525e-21" />
+                    <values v21="2.87314e-20" v22="0.000236732" v23="4.19492e-06" />
+                    <values v31="-1.35525e-21" v32="4.19492e-06" v33="0.000546012" />
+                </inertia>
+            </floating>
+            <floating mkbound="54" mk="65" begin="40682" count="378" property="hard-wood+water">
+                <massbody value="0.4725" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.551905" z="0.0338095" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000585429" v12="2.38524e-20" v13="-3.79471e-21" />
+                    <values v21="2.38524e-20" v22="0.000267455" v23="-2.35714e-05" />
+                    <values v31="-3.79471e-21" v32="-2.35714e-05" v33="0.000593598" />
+                </inertia>
+            </floating>
+            <floating mkbound="55" mk="66" begin="41060" count="372" property="hard-wood+water">
+                <massbody value="0.465" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.167742" z="0.0833871" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000576544" v12="2.60209e-20" v13="2.10064e-21" />
+                    <values v21="2.60209e-20" v22="0.00026004" v23="2.79435e-05" />
+                    <values v31="2.10064e-21" v32="2.79435e-05" v33="0.000587754" />
+                </inertia>
+            </floating>
+            <floating mkbound="56" mk="67" begin="41432" count="342" property="hard-wood+water">
+                <massbody value="0.4275" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.319474" z="0.0810526" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000511658" v12="9.21572e-21" v13="4.06576e-22" />
+                    <values v21="9.21572e-21" v22="0.000220214" v23="6.51316e-06" />
+                    <values v31="4.06576e-22" v32="6.51316e-06" v33="0.000540819" />
+                </inertia>
+            </floating>
+            <floating mkbound="57" mk="68" begin="41774" count="390" property="hard-wood+water">
+                <massbody value="0.4875" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.470769" z="0.0846154" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000615577" v12="-2.38524e-20" v13="-1.35525e-21" />
+                    <values v21="-2.38524e-20" v22="0.000281803" v23="-9.51923e-06" />
+                    <values v31="-1.35525e-21" v32="-9.51923e-06" v33="0.000618149" />
+                </inertia>
+            </floating>
+            <floating mkbound="58" mk="69" begin="42164" count="396" property="hard-wood+water">
+                <massbody value="0.495" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.24" z="0.135" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000639375" v12="4.98733e-20" v13="1.6263e-21" />
+                    <values v21="4.98733e-20" v22="0.00028875" v23="-1.27394e-20" />
+                    <values v31="1.6263e-21" v32="-1.27394e-20" v33="0.000639375" />
+                </inertia>
+            </floating>
+            <floating mkbound="59" mk="70" begin="42560" count="396" property="hard-wood+water">
+                <massbody value="0.495" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="0.625" y="0.37" z="0.135" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000639375" v12="2.38524e-20" v13="1.6263e-21" />
+                    <values v21="2.38524e-20" v22="0.00028875" v23="-2.71051e-22" />
+                    <values v31="1.6263e-21" v32="-2.71051e-22" v33="0.000639375" />
+                </inertia>
+            </floating>
+            <floating mkbound="60" mk="71" begin="42956" count="372" property="hard-wood+water">
+                <massbody value="0.465" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.0977419" z="0.0333871" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000576544" v12="3.63208e-20" v13="3.38813e-22" />
+                    <values v21="3.63208e-20" v22="0.00026004" v23="2.79435e-05" />
+                    <values v31="3.38813e-22" v32="2.79435e-05" v33="0.000587754" />
+                </inertia>
+            </floating>
+            <floating mkbound="61" mk="72" begin="43328" count="354" property="hard-wood+water">
+                <massbody value="0.4425" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.249661" z="0.0320339" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000524619" v12="8.67362e-21" v13="4.74338e-22" />
+                    <values v21="8.67362e-21" v22="0.000236732" v23="4.19492e-06" />
+                    <values v31="4.74338e-22" v32="4.19492e-06" v33="0.000546012" />
+                </inertia>
+            </floating>
+            <floating mkbound="62" mk="73" begin="43682" count="354" property="hard-wood+water">
+                <massbody value="0.4425" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.399661" z="0.0320339" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000524619" v12="5.96311e-21" v13="4.74338e-22" />
+                    <values v21="5.96311e-21" v22="0.000236732" v23="4.19492e-06" />
+                    <values v31="4.74338e-22" v32="4.19492e-06" v33="0.000546012" />
+                </inertia>
+            </floating>
+            <floating mkbound="63" mk="74" begin="44036" count="378" property="hard-wood+water">
+                <massbody value="0.4725" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.551905" z="0.0338095" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000585429" v12="-1.0842e-20" v13="2.57498e-21" />
+                    <values v21="-1.0842e-20" v22="0.000267455" v23="-2.35714e-05" />
+                    <values v31="2.57498e-21" v32="-2.35714e-05" v33="0.000593598" />
+                </inertia>
+            </floating>
+            <floating mkbound="64" mk="75" begin="44414" count="372" property="hard-wood+water">
+                <massbody value="0.465" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.167742" z="0.0833871" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000576544" v12="-4.01155e-20" v13="9.48677e-22" />
+                    <values v21="-4.01155e-20" v22="0.00026004" v23="2.79435e-05" />
+                    <values v31="9.48677e-22" v32="2.79435e-05" v33="0.000587754" />
+                </inertia>
+            </floating>
+            <floating mkbound="65" mk="76" begin="44786" count="342" property="hard-wood+water">
+                <massbody value="0.4275" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.319474" z="0.0810526" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000511658" v12="-2.71051e-20" v13="1.28749e-21" />
+                    <values v21="-2.71051e-20" v22="0.000220214" v23="6.51316e-06" />
+                    <values v31="1.28749e-21" v32="6.51316e-06" v33="0.000540819" />
+                </inertia>
+            </floating>
+            <floating mkbound="66" mk="77" begin="45128" count="390" property="hard-wood+water">
+                <massbody value="0.4875" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.470769" z="0.0846154" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000615577" v12="-1.13841e-20" v13="2.84603e-21" />
+                    <values v21="-1.13841e-20" v22="0.000281803" v23="-9.51923e-06" />
+                    <values v31="2.84603e-21" v32="-9.51923e-06" v33="0.000618149" />
+                </inertia>
+            </floating>
+            <floating mkbound="67" mk="78" begin="45518" count="396" property="hard-wood+water">
+                <massbody value="0.495" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.24" z="0.135" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000639375" v12="7.04731e-21" v13="1.35525e-21" />
+                    <values v21="7.04731e-21" v22="0.00028875" v23="-1.27394e-20" />
+                    <values v31="1.35525e-21" v32="-1.27394e-20" v33="0.000639375" />
+                </inertia>
+            </floating>
+            <floating mkbound="68" mk="79" begin="45914" count="396" property="hard-wood+water">
+                <massbody value="0.495" units_comment="kg" />
+                <masspart value="0.00125" units_comment="kg" />
+                <center x="1.325" y="0.37" z="0.135" units_comment="metres (m)" />
+                <inertia units_comment="kg*m^2">
+                    <values v11="0.000639375" v12="-1.89735e-20" v13="1.35525e-21" />
+                    <values v21="-1.89735e-20" v22="0.00028875" v23="-2.71051e-22" />
+                    <values v31="1.35525e-21" v32="-2.71051e-22" v33="0.000639375" />
+                </inertia>
+            </floating>
+            <fluid mkfluid="0" mk="1" begin="46310" count="79200" property="water" />
+            <fluid mkfluid="1" mk="2" begin="125510" count="316032" property="air" />
+            <properties>
+                <links>
+                    <link mk="1" property="water" />
+                    <link mk="2" property="air" />
+                    <link mk="11" property="steel+userdef01+water" />
+                    <link mk="62-79" property="hard-wood+water" />
+                </links>
+                <property name="hard-wood">
+                    <Young_Modulus value="200000000.0" comment="Young Modulus (N/m2)" />
+                    <PoissonRatio value="0.20" comment="Poisson Ratio (-)" />
+                    <Restitution_Coefficient value="0.60" comment="Restitution Coefficient (-)" />
+                    <Kfric value="0.70" comment="Kinetic friction coefficient" />
+                </property>
+                <property name="steel">
+                    <Young_Modulus value="210000000000.0" comment="Young Modulus (N/m2)" />
+                    <PoissonRatio value="0.30" comment="Poisson Ratio (-)" />
+                    <Restitution_Coefficient value="0.80" comment="Restitution Coefficient (-)" />
+                    <Kfric value="0.45" comment="Kinetic friction coefficient" />
+                </property>
+                <property name="userdef01" Restitution_Coefficient_User="0.65" comment="User redefinition for Restitution Coefficient (-)" />
+                <property name="water">
+                    <rhop0 value="1000" />
+                    <gamma value="7" />
+                    <cs0 value="50" />
+                    <visco value="0.05" />
+                    <phasetype value="0" />
+                    <surfcoef value="0" />
+                </property>
+                <property name="air">
+                    <rhop0 value="1.18" />
+                    <gamma value="1.4" />
+                    <cs0 value="200" />
+                    <visco value="0.05" />
+                    <phasetype value="1" />
+                    <surfcoef value="0" />
+                </property>
+            </properties>
+        </particles>
+        <constants>
+            <gravity x="0" y="0" z="-9.81" units_comment="m/s^2" />
+            <cflnumber value="0.2" />
+            <gamma value="7" />
+            <rhop0 value="1000" units_comment="kg/m^3" />
+            <dp value="0.01" units_comment="metres (m)" />
+            <h value="1.7320508076E-02" units_comment="metres (m)" />
+            <b value="1.2297535714E+05" units_comment="Pascal (Pa)" />
+            <massbound value="1.0000000000E-03" units_comment="kg" />
+            <massfluid value="1.0000000000E-03" units_comment="kg" />
+        </constants>
+        <motion />
+    </execution>
+</case>

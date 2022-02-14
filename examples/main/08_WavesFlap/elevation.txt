@@ -1,0 +1,21 @@
+POINTSLIST
+5 0 0.2
+0 0 0.001
+1 1 1000
+
+POINTSLIST
+6 0 0.2
+0 0 0.001
+1 1 1000
+
+POINTSLIST
+7 0 0.2
+0 0 0.001
+1 1 1000
+
+#"POINTSLIST"
+#BeginX BeginY BeginZ
+#StepX StepY StepZ
+#CountX CountY CountZ
+
+

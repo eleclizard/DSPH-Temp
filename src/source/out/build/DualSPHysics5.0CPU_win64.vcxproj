@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7682CD73-E9CC-35B7-9C7E-AEE153DFF9D8}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>DualSPHysics5.0CPU_win64</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Doctor_of_Philosophy\Dummy_DSPH_bin\bin\windows\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DualSPHysics5.0CPU_win64.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DualSPHysics5.0CPU_win64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Doctor_of_Philosophy\Dummy_DSPH_bin\bin\windows\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DualSPHysics5.0CPU_win64.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DualSPHysics5.0CPU_win64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Doctor_of_Philosophy\Dummy_DSPH_bin\bin\windows\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">DualSPHysics5.0CPU_win64.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">DualSPHysics5.0CPU_win64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Doctor_of_Philosophy\Dummy_DSPH_bin\bin\windows\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">DualSPHysics5.0CPU_win64.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">DualSPHysics5.0CPU_win64</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;DISABLE_MOORDYN;DISABLE_CHRONO;DISABLE_CHRONO_OMP;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;DISABLE_MOORDYN;DISABLE_CHRONO;DISABLE_CHRONO_OMP;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>LibJVtkLib_x64_v140_Release.lib;LibJWaveGen_x64_v140_Release.lib;LibJNumexLib_x64_v140_Release.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/../lib/vs2015;E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/../lib/vs2015/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/Debug/DualSPHysics5.0CPU_win64.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Doctor_of_Philosophy/Dummy_DSPH_bin/bin/windows/DualSPHysics5.0CPU_win64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;DISABLE_MOORDYN;DISABLE_CHRONO;DISABLE_CHRONO_OMP;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;DISABLE_MOORDYN;DISABLE_CHRONO;DISABLE_CHRONO_OMP;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>LibJVtkLib_x64_v140_Release.lib;LibJWaveGen_x64_v140_Release.lib;LibJNumexLib_x64_v140_Release.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/../lib/vs2015;E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/../lib/vs2015/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/Release/DualSPHysics5.0CPU_win64.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Doctor_of_Philosophy/Dummy_DSPH_bin/bin/windows/DualSPHysics5.0CPU_win64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;DISABLE_MOORDYN;DISABLE_CHRONO;DISABLE_CHRONO_OMP;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;DISABLE_MOORDYN;DISABLE_CHRONO;DISABLE_CHRONO_OMP;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>LibJVtkLib_x64_v140_Release.lib;LibJWaveGen_x64_v140_Release.lib;LibJNumexLib_x64_v140_Release.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/../lib/vs2015;E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/../lib/vs2015/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/MinSizeRel/DualSPHysics5.0CPU_win64.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Doctor_of_Philosophy/Dummy_DSPH_bin/bin/windows/MinSizeRel/DualSPHysics5.0CPU_win64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) -fPIC</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;DISABLE_MOORDYN;DISABLE_CHRONO;DISABLE_CHRONO_OMP;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_GLIBCXX_USE_CXX11_ABI=0;DISABLE_MOORDYN;DISABLE_CHRONO;DISABLE_CHRONO_OMP;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>LibJVtkLib_x64_v140_Release.lib;LibJWaveGen_x64_v140_Release.lib;LibJNumexLib_x64_v140_Release.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/../lib/vs2015;E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/../lib/vs2015/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/RelWithDebInfo/DualSPHysics5.0CPU_win64.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Doctor_of_Philosophy/Dummy_DSPH_bin/bin/windows/RelWithDebInfo/DualSPHysics5.0CPU_win64.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source -BE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build --check-stamp-file E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA\run_nvcc.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeCCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeCXXCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeRCCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeSystem.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.depend;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source -BE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build --check-stamp-file E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA\run_nvcc.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeCCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeCXXCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeRCCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeSystem.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.depend;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source -BE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build --check-stamp-file E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA\run_nvcc.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeCCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeCXXCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeRCCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeSystem.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.depend;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source -BE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build --check-stamp-file E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA\run_nvcc.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindOpenMP.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.20\Modules\Platform\WindowsPaths.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeCCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeCXXCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeRCCompiler.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\3.20.2\CMakeSystem.cmake;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj.depend;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.cmake.pre-gen;E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj.depend;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JXml.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\tinystr.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\tinyxml.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\tinyxmlerror.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\tinyxmlparser.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotion.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotionList.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotionMov.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotionObj.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotionPos.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsMotion.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\Functions.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\FunGeo3d.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\FunSphKernelsCfg.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JAppInfo.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JBinaryData.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCfgRunBase.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDataArrays.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JException.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JLinearValue.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JLog2.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JObject.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JOutputCsv.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JRadixSort.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JRangeFilter.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JReadDatafile.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSaveCsv2.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JTimeControl.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\randomc.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsphConfig.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsPips.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartDataBi4.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartDataHead.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartFloatBi4.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartOutBi4Save.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseCtes.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseEParms.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseParts.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseProperties.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseUserVars.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseVtkOut.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JArraysCpu.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCellDivCpu.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCfgRun.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JComputeMotionRef.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsDamping.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsGaugeItem.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsGaugeSystem.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsPartsOut.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsSaveDt.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphShifting.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSph.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsAccInput.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCpu.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsInitialize.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphMk.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsPartsInit.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsFixedDt.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsViscoInput.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsOutputTime.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JFtMotionSave.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JWaveAwasZsurf.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JWaveSpectrumGpu.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\main.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCellDivCpuSingle.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartsLoad4.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCpuSingle.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMLPistonsGpu.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JRelaxZonesGpu.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JChronoObjects.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsMooredFloatings.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsFtForcePoints.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCpu_InOut.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCpuSingle_InOut.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphBoundCorr.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOut.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutZone.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutGridData.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutPoints.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutVel.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutVelAwas.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutZsurf.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSimpleNeigs.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartNormalData.cpp" />
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JNormalsMarrone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\ZERO_CHECK.vcxproj">
+      <Project>{59ED64D2-A782-3714-928A-D081EC62BE06}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

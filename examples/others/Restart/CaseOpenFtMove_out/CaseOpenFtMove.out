@@ -1,0 +1,128 @@
+
+
+ <GENCASE>  Copyright (c) 2020 by Dr Jose M. Dominguez
+ All rights reserved.
+
+ DualSPHysics is an international collaboration between University of Vigo 
+ (Spain) and University of Manchester (UK). 
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ * Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of the DualSPHysics nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+
+GenCase v5.0.197 (18-07-2020) 
+===============================
+OmpThreads: 8
+
+[LoadXMLInit]
+List: MAIN
+
+Total operations: 15
+[LoadXMLInit-End  time:0.002s]
+
+[Draw]
+List of available variables: Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[-9.81]  Rhop0=[1000]  Dp=[0.02]  PosMin_x=[-1]  PosMin_y=[0]  PosMin_z=[-1]  PosMax_x=[4.5]  PosMax_y=[0]  PosMax_z=[3.5]  CaseName=["CaseOpenFtMove"]  Data2D=[1]  Data2DPosy=[0]  H=[0.0282843]  MassBound=[0.4]  MassFluid=[0.4]
+
+Mk size: 1 bytes
+Case limits: (-1,0,-1) - (4.5,0,3.5)
+Distance between points: 0.02
+Case domain: (0,0,0)-(274,0,224)
+Domain points: 275 x 1 x 225 = 61875
+Case parts: 1 x 225z
+Memory: 0.00Gb 0.06Mb (61875)
+
+> MAIN
+FileShapes> _Actual.vtk  shapes:25  points:36   (time:0.011s)
+<MAIN (Operations= 9+6+1 = 16)
+
+Triangles: 82 (0 ignored)
+[Draw-End  time:0.024s]
+
+[LoadsXMLConfig]
+Execution parameters.
+Initials configuration.
+Floating bodies configuration.
+Properties configuration.
+Predefined motion configuration.
+[LoadsXMLConfig-End  time:0.013s]
+
+[PreparePoints]
+Computing Vtk-Cells data...  (time:0.001s)
+BitSizeTot: 18 (3 + 8+1+6)
+Points loaded: 7701
+Sorting points by Z...
+Sorting points by Mk...
+
+List of Points:
+Points -> Fixed-Boundary particles:
+  block[  0] (mk: 10):    151  -->     151
+Points -> Moving-Boundary particles:
+  block[  1] (mk: 11):     44  -->      44
+Points -> Floating-Boundary particles:
+  block[  2] (mk: 12):     36  -->      36
+  block[  3] (mk: 13):     66  -->      66
+  block[  4] (mk: 14):     36  -->      36
+Points -> Fluid particles:
+  block[  5] (mk:  1):   7368  -->    7368
+
+Particle summary:
+  Fixed....: 151  id:(0-150)   MKs:1 (10)
+  Moving...: 44  id:(151-194)   MKs:1 (11)
+  Floating.: 138  id:(195-332)   MKs:3 (12-14)
+  Fluid....: 7368  id:(333-7700)   MKs:1 (1)
+
+Total particles: 7701 (bound=333 (fx=151 mv=44 ft=138) fluid=7368)
+Total MK blocks: 6 (bound=5 (fx=1 mv=1 ft=3) fluid=1)
+
+Maximum depth: 0.98 (automatic)
+Speed of system: 3.10061 (automatic)
+Speed of sound: max(coefsound*speedsystem,10*sqrt(g*depth))
+Speed of sound: 62.0123 max(62.0123,31.0061)
+Speed of sound: 62.0123 (automatic)
+
+Coefh:1.000000 (hdp:1.414214)
+
+[PreparePoints-End  time:0.031s]
+
+[SaveCase2D]
+CaseOpenFtMove_out/CaseOpenFtMove_MkCells.vtk  (time:0.065s, shapes:18, points:72)
+CaseOpenFtMove_out/CaseOpenFtMove.bi4<double>  (time:0.008s)
+CaseOpenFtMove_out/CaseOpenFtMove_All.vtk  (time: 0.006s)
+CaseOpenFtMove_out/CaseOpenFtMove_Bound.vtk  (time: 0.005s)
+CaseOpenFtMove_out/CaseOpenFtMove_Fluid.vtk  (time: 0.005s)
+CaseOpenFtMove_out/CaseOpenFtMove.xml  (time:0.006s)
+ 
+Data file copied: Floating_Materials.xml (xml row:81)
+
+Save files time: 0.095s
+
+Particle limits:
+  X range: 0 to 3 [m]
+  Y range: 0 to 0 [m]
+  Z range: 0 to 1 [m]
+
+[SaveCase2D-End  time:0.100s]
+
+
+Finished execution (code=0).
+

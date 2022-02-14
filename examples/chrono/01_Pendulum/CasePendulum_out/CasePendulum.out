@@ -1,0 +1,133 @@
+
+
+ <GENCASE>  Copyright (c) 2020 by Dr Jose M. Dominguez
+ All rights reserved.
+
+ DualSPHysics is an international collaboration between University of Vigo 
+ (Spain) and University of Manchester (UK). 
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ * Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of the DualSPHysics nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+
+GenCase v5.0.197 (18-07-2020) 
+===============================
+OmpThreads: 8
+
+[LoadXMLInit]
+List: MAIN
+
+Total operations: 13
+[LoadXMLInit-End  time:0.004s]
+
+[Draw]
+List of available variables: Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[-9.81]  Rhop0=[1000]  Dp=[0.05]  PosMin_x=[4]  PosMin_y=[0.5]  PosMin_z=[-0.1]  PosMax_x=[6]  PosMax_y=[9.5]  PosMax_z=[7.5]  CaseName=["CasePendulum"]  Data2D=[0]  Data2DPosy=[0]  H=[0.0866025]  MassBound=[0.125]  MassFluid=[0.125]
+
+Mk size: 1 bytes
+Case limits: (4,0.5,-0.1) - (6,9.5,7.5)
+Distance between points: 0.05
+Case domain: (0,0,0)-(39,179,150)
+Domain points: 40 x 180 x 151 = 1087200
+Case parts: 1 x 151z
+Memory: 0.00Gb 1.04Mb (1087200)
+
+> MAIN
+FileShapes> _Actual.vtk  shapes:197  points:204   (time:0.010s)
+<MAIN (Operations= 8+5+1 = 14)
+
+Triangles: 10 (0 ignored)
+[Draw-End  time:0.017s]
+
+[LoadsXMLConfig]
+Execution parameters.
+Initials configuration.
+Floating bodies configuration.
+Properties configuration.
+Predefined motion configuration.
+[LoadsXMLConfig-End  time:0.016s]
+
+[PreparePoints]
+Computing Vtk-Cells data...  (time:0.036s)
+BitSizeTot: 24 (3 + 6+8+7)
+Points loaded: 7828
+Sorting points by Z...
+Sorting points by Mk...
+
+List of Points:
+Points -> Fixed-Boundary particles:
+  block[  0] (mk: 15):   7200  -->    7200
+Points -> Floating-Boundary particles:
+  block[  1] (mk: 10):    157  -->     157
+  block[  2] (mk: 11):    157  -->     157
+  block[  3] (mk: 12):    157  -->     157
+  block[  4] (mk: 13):    157  -->     157
+
+Particle summary:
+  Fixed....: 7200  id:(0-7199)   MKs:1 (15)
+  Moving...: 0
+  Floating.: 628  id:(7200-7827)   MKs:4 (10-13)
+  Fluid....: 0
+
+Total particles: 7828 (bound=7828 (fx=7200 mv=0 ft=628) fluid=0)
+Total MK blocks: 5 (bound=5 (fx=1 mv=0 ft=4) fluid=0)
+
+*** WARNING: No fluid particles were created in the defined domain.
+
+
+*** WARNING: Automatic maximum depth is zero since there are no fluid particles.
+
+
+Maximum depth: 0 (automatic)
+Speed of system: 5 (fixed)
+Speed of sound: max(coefsound*speedsystem,10*sqrt(g*depth))
+Speed of sound: 100 max(100,0)
+Speed of sound: 100 (automatic)
+
+Coefh:1.000000 (hdp:1.732051)
+
+[PreparePoints-End  time:0.064s]
+
+[SaveCase3D]
+CasePendulum_out/CasePendulum_MkCells.vtk  (time:0.008s, shapes:142, points:568)
+CasePendulum_out/CasePendulum.bi4<double>  (time:0.009s)
+CasePendulum_out/CasePendulum_All.vtk  (time: 0.009s)
+CasePendulum_out/CasePendulum_Bound.vtk  (time: 0.009s)
+CasePendulum_out/CasePendulum.xml  (time:0.010s)
+ 
+Data file copied: Floating_Materials.xml (xml row:59)
+
+Save files time: 0.046s
+
+Particle limits:
+  X range: 4 to 5.95 [m]
+  Y range: 0.5 to 9.45 [m]
+  Z range: 0 to 5.05 [m]
+
+[SaveCase3D-End  time:0.057s]
+
+[WARNINGS]
+1. No fluid particles were created in the defined domain.
+2. Automatic maximum depth is zero since there are no fluid particles.
+
+Finished execution (code=0).
+

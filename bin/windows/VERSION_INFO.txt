@@ -1,0 +1,15 @@
+DualSPHysics5             v5.0.175            21-02-2021
+BoundaryVTK               v5.0.147            27-01-2021
+ComputeForces             v5.0.147            27-01-2021
+FloatingInfo              v5.0.147            27-01-2021
+GenCase                   v5.0.229            29-01-2021
+GenCase [MkWord]          v5.0.229            29-01-2021
+IsoSurface                v5.0.147            27-01-2021
+FlowTool                  v5.0.147            27-01-2021
+MeasureTool               v5.0.147            27-01-2021
+PartVTK                   v5.0.147            27-01-2021
+PartVTKOut                v5.0.147            27-01-2021
+BIFileInfo                v5.0.147            27-01-2021
+ReadSwash                 v5.0.037            30-06-2020
+DualSPHysics5-NNewtonian  v1.005(v5.0.164)    21-11-2020
+DualSPHysics4-LiquidGas   v1.010(v4.0.048)    04-06-2018

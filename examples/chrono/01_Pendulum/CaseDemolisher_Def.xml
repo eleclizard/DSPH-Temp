@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase4 v4.0.074 (06-08-2018)" date="06-08-2018 23:32:17">
+    <casedef>
+        <constantsdef>
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000" comment="Reference density of the fluid" units_comment="kg/m^3" />
+            <hswl value="0" auto="true" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" />
+            <gamma value="7" comment="Polytropic constant for water used in the state equation" />
+            <speedsystem value="5" auto="false" comment="Maximum system speed (by default the dam-break propagation is used)" />
+            <coefsound value="20" comment="Coefficient to multiply speedsystem" />
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
+            <coefh value="1" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
+            <cflnumber value="0.2" comment="Coefficient to multiply dt" />
+        </constantsdef>
+        <mkconfig boundcount="240" fluidcount="9" />
+        <geometry>
+            <definition dp="0.05" comment="Initial inter-particle distance" units_comment="metres (m)">
+                <pointmin x="-0.5" y="-0.5" z="-0.5" />
+                <pointmax x="12.5" y="10.5" z="7.5" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>real | bound</setshapemode>
+                    <setmkbound mk="10" />
+                    <drawbox>
+                        <boxfill>bottom | left | right | front | back</boxfill>
+                        <point x="0.0" y="2.0" z="0.0" />
+                        <size x="11.0" y="6.0" z="3.0" />
+                    </drawbox>
+                    <shapeout file="Domain" />
+                    <setdrawmode mode="full" />
+                    <setmkbound mk="0" />
+                    <drawcylinder radius="0.025" mask="1">
+                        <point x="5" y="5" z="5.2" />
+                        <point x="6" y="5" z="5.2" />
+                    </drawcylinder>
+                    <setmkbound mk="1" />
+                    <drawcylinder radius="0.025" mask="1">
+                        <point x="6" y="5" z="5.2" />
+                        <point x="7" y="5" z="5.2" />
+                    </drawcylinder>
+                    <setmkbound mk="2" />
+                    <drawcylinder radius="0.025" mask="1">
+                        <point x="7" y="5" z="5.2" />
+                        <point x="8" y="5" z="5.2" />
+                    </drawcylinder>
+                    <setmkbound mk="3" />
+                    <drawcylinder radius="0.025" mask="1">
+                        <point x="8" y="5" z="5.2" />
+                        <point x="9" y="5" z="5.2" />
+                    </drawcylinder>
+                    <shapeout file="Pendulum" />
+                    <setmkbound mk="4" />
+                    <drawsphere radius="0.35" mask="1">
+                        <point x="9.35" y="5" z="5.2" />
+                    </drawsphere>
+                    <shapeout file="WreckingBall" />
+                    <setmkbound mk="51" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="3.70" z="0.05" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="52" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="4.25" z="0.05" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="53" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="4.8" z="0.05" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="54" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="5.35" z="0.05" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="55" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="5.9" z="0.05" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="56" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="3.45" z="0.6" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="57" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="4.0" z="0.6" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="58" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="4.55" z="0.6" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="59" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="5.1" z="0.6" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="60" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="5.65" z="0.6" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="61" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="6.2" z="0.6" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="62" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="3.70" z="1.15" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="63" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="4.25" z="1.15" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="64" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="4.8" z="1.15" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="65" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="5.35" z="1.15" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <setmkbound mk="66" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="4.70" y="5.9" z="1.15" />
+                        <size x="0.5" y="0.5" z="0.5" />
+                    </drawbox>
+                    <shapeout file="Boxes" />
+                </mainlist>
+            </commands>
+        </geometry>
+        <floatings>
+            <floating mkbound="0-3" relativeweight="1.2" property="steel" />
+            <floating mkbound="4" relativeweight="2.5" property="steel" />
+            <floating mkbound="51-66" relativeweight="1.2" property="soft-wood" />
+        </floatings>
+        <properties>
+            <propertyfile file="Floating_Materials.xml" path="materials" />
+            <links>
+                <link mkbound="10" property="steel" comment="Property for the fixed bound" />
+            </links>
+        </properties>
+    </casedef>
+    <execution>
+        <special>
+            <chrono>
+                <_savedata value="0.02" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
+                <schemescale value="1" comment="Scale used to create the initial scheme of Chrono objects (default=1)" />
+				<collision activate="true">
+                    <distancedp value="0.5" comment="Allowed collision overlap according Dp (default=0.5)" />
+					<contactmethod value="0" comment="Contact method type. 0:NSC (Non Smooth Contacts), 1:SMC (SMooth Contacts). (default=0)" />					
+				</collision>
+                <bodyfixed id="domain" mkbound="10" modelfile="AutoActual" modelnormal="invert" />
+                <bodyfloating id="arm" mkbound="0-3" />
+                <bodyfloating id="ball" mkbound="4" modelfile="AutoActual" />
+                <bodyfloating id="box" mkbound="51-66" modelfile="AutoActual" />
+                <link_spheric idbody1="arm0">
+                    <rotpoint x="5" y="5" z="5.2" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+                </link_spheric>
+                <link_spheric idbody1="arm0" idbody2="arm1">
+                    <rotpoint x="6" y="5" z="5.2" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+                </link_spheric>
+                <link_spheric idbody1="arm1" idbody2="arm2">
+                    <rotpoint x="7" y="5" z="5.2" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+                </link_spheric>
+                <link_spheric idbody1="arm2" idbody2="arm3">
+                    <rotpoint x="8" y="5" z="5.2" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+                </link_spheric>
+                <link_spheric idbody1="arm3" idbody2="ball">
+                    <rotpoint x="9" y="5" z="5.2" comment="Point for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="0" comment="Torsional damping [Nms/rad]" />
+                </link_spheric>
+            </chrono>
+        </special>
+        <parameters>
+            <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />
+            <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping (default=40)" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (default=2)" />
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
+            <parameter key="Visco" value="0.01" comment="Viscosity value" />
+            <parameter key="ViscoBoundFactor" value="1" comment="Multiply viscosity value with boundary (default=1)" />
+			<parameter key="DensityDT" value="0" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
+			<parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
+            <parameter key="Shifting" value="0" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
+            <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
+            <parameter key="ShiftTFS" value="0" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
+            <parameter key="RigidAlgorithm" value="3" comment="Rigid Algorithm 0:collision-free, 1:SPH, 2:DEM, 3:Chrono (default=1)" />
+            <parameter key="FtPause" value="0.0" comment="Time to freeze the floatings at simulation start (warmup) (default=0)" units_comment="seconds" />
+            <parameter key="CoefDtMin" value="0.05" comment="Coefficient to calculate minimum time step dtmin=coefdtmin*h/speedsound (default=0.05)" />
+            <parameter key="DtIni" value="0" comment="Initial time step. Use 0 to defult use (default=h/speedsound)" units_comment="seconds" />
+            <parameter key="DtMin" value="0" comment="Minimum time step. Use 0 to defult use (default=coefdtmin*h/speedsound)" units_comment="seconds" />
+            <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
+            <parameter key="TimeMax" value="3" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.01" comment="Time out data" units_comment="seconds" />
+            <parameter key="PartsOutMax" value="1" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
+            <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
+            <simulationdomain comment="Defines domain of simulation (default=Uses minimun and maximum position of the generated particles)">
+                <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
+                <posmax x="default" y="default" z="default + 10%" />
+            </simulationdomain>
+        </parameters>
+    </execution>
+</case>

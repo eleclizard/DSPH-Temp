@@ -1,0 +1,477 @@
+
+
+ <DUALSPHYSICS5> Copyright (c) 2020 by
+ Dr Jose M. Dominguez Alonso, Dr Alejandro Crespo,
+ Prof. Moncho Gomez Gesteira, Prof. Benedict Rogers,
+ Dr Georgios Fourtakas, Prof. Peter Stansby,
+ Dr Renato Vacondio, Dr Corrado Altomare, Dr Angelo Tafuni,
+ Orlando Garcia Feal, Ivan Martinez Estevez
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+
+DualSPHysics5 v5.0.140 (18-07-2020)
+====================================
+[Select CUDA Device]
+[CUDA Capable device(s)]
+  Detected 1 CUDA Capable device(s)
+  CUDA Driver Version / Runtime Version: 10.2 / 9.2
+ 
+Device 0: "GeForce GTX 1050"
+  CUDA Capability Major....: 6.1
+  Global memory............: 3072 MBytes
+  CUDA Cores...............: 768 ( 6 Multiprocessors, 128 CUDA Cores/MP)
+  GPU Max Clock rate.......: 1442 MHz (1.44 GHz)
+  Memory Clock rate........: 3504 Mhz
+  Memory Bus Width.........: 96-bit
+  L2 Cache Size............: 768 KBytes
+  Constant memory..........: 64 KBytes
+  Shared memory per block..: 48 KBytes
+  Registers per block......: 65536
+  Maximum threads per MP...: 2048
+  Maximum threads per block: 1024
+  Concurrent copy and kernel execution....: Yes with 5 copy engine(s)
+  Run time limit on kernels...............: No
+  Integrated GPU sharing Host Memory......: No
+  Support host page-locked memory mapping.: Yes
+  Device has ECC support..................: Disabled
+  CUDA Device Driver Mode (TCC or WDDM)...: WDDM (Windows Display Driver Model)
+  Device supports Unified Addressing (UVA): Yes
+  Device PCI (Domain / Bus / location)....: 0 / 1 / 0
+  Device supports P2P and RDMA............: No
+ 
+[GPU Hardware]
+Device default: 0  "GeForce GTX 1050"
+Compute capability: 6.1
+Memory global: 3072 MB
+Memory shared: 49152 Bytes
+[Initialising JSphGpuSingle  28-07-2020 13:00:07]
+ProgramFile=".../bin/windows/DualSPHysics5.0_win64.exe"
+ExecutionDir=".../examples/others/Restart"
+XmlFile=".../Restart/CaseOpenFtMove_restart_out/CaseOpenFtMove.xml"
+OutputDir=".../others/Restart/CaseOpenFtMove_restart_out"
+OutputDataDir=".../Restart/CaseOpenFtMove_restart_out/data"
+PartBegin=100
+PartBeginDir="CaseOpenFtMove_out\data"
+PartBeginFirst=100
+XML-Vars (uservars + ctes): CaseName=["CaseOpenFtMove"]  Data2D=[1]  Data2DPosy=[0]  H=[0.0282843]  KernelSize=[0.0565685]  B=[549360]  Gamma=[7]  Rhop0=[1000]  Dp=[0.02]  Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[-9.81]  MassFluid=[0.4]  MassBound=[0.4]
+XML-Vars (parameters): TimeMax=[3]  TimeOut=[0.01]
+**Basic case configuration is loaded
+**Special case configuration is loaded
+Loading initial state of particles...
+Loaded particles: 7701
+MapRealPos(final)=(-0.01,-0.00141421,-0.00141421)-(3.01,0.00141421,2.00424)
+**Initial state of particles is loaded
+**2D-Simulation parameters:
+CaseName="CaseOpenFtMove"
+RunName="CaseOpenFtMove"
+Simulate2DPosY=0
+Symmetry=False
+SavePosDouble=False
+SaveFtAce=False
+SvTimers=True
+PIPS-steps=100
+Boundary="DBC"
+StepAlgorithm="Verlet"
+  VerletSteps=40
+Kernel="Wendland"
+  Wendland.awen=696.250061
+  Wendland.bwen=-123089.625000
+Viscosity="Artificial"
+  Visco=0.020000
+  ViscoBoundFactor=1.000000
+DensityDiffusion="Fourtakas et al 2019 (inner)"
+  DensityDiffusionValue=0.100000
+Shifting="None"
+RigidAlgorithm="SPH+DCDEM"
+FloatingCount=3
+FtPause=0.000000
+FtConstraints=False
+FtIgnoreRadius=False
+CaseNp=7701
+CaseNbound=333
+CaseNfixed=151
+CaseNmoving=44
+CaseNfloat=138
+CaseNfluid=7368
+PeriodicActive="Axis-X"
+PeriodicXinc=(-3.02,0,0)
+Dp=0.02
+KernelH=0.028284  (CoefficientH=1; H/Dp=1.41421)
+KernelSize=0.056569
+CteB=549360.000000
+Gamma=7.000000
+RhopZero=1000.000000
+Cs0=62.0123
+CFLnumber=0.200000
+DtIni=0.000456108
+DtMin=2.28054e-05
+DtAllParticles=False
+MassFluid=0.400000
+MassBound=0.400000
+Coefficients for DEM:
+  Object Fixed  mkbound:0  mk:10
+    Young_Modulus: 2.1e+11
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.7
+  Object Moving  mkbound:1  mk:11
+    Young_Modulus: 2.1e+11
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.7
+  Object Floating  mkbound:2  mk:12
+    Young_Modulus: 2.1e+11
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.7
+  Object Floating  mkbound:3  mk:13
+    Young_Modulus: 3e+09
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.6
+  Object Floating  mkbound:4  mk:14
+    Young_Modulus: 3e+09
+    PoissonRatio.: 0.3
+    Kfric........: 0.45
+    Restitution..: 0.6
+FtPause=0.000000
+TimeMax=3
+TimePart=0.01
+Gravity=(0.000000,0.000000,-9.810000)
+NpMinimum=333
+RhopOut=True
+RhopOutMin=700.000000
+RhopOutMax=1300.000000
+WrnPartsOut=True
+**Requested GPU memory for 7829 particles: 1.2 MB (0 times).
+CellMode="Full"
+ScellDiv=1
+MapCells=(56,1,36)
+DomCells=(56,1,36)
+DomCellCode="13_8_12"
+PosCellCode="13_10_9 (8192,1024,512)"
+PosCellSize=0.056569  (1 x KernelSize)
+ 
+BlockSize calculation mode: Fixed.
+  BsForcesBound=128 (48 regs)
+  BsForcesFluid=128 (60 regs)
+  BsForcesDem=128 (56 regs)
+ 
+**JSphGpu: Requesting gpu memory for 8220 particles: 1.3 MB.
+**CellDiv: Requested gpu memory for 8516 particles: 0.1 MB.
+**CellDiv: Requested gpu memory for 2394 cells (CellMode=Full): 0.0 MB.
+ 
+RunMode="Pos-Cell - Single-Gpu"
+ 
+Particle summary:
+  Fixed....: 151  id:(0-150)   MKs:1 (10)
+  Moving...: 44  id:(151-194)   MKs:1 (11)
+  Floating.: 138  id:(195-332)   MKs:3 (12-14)
+  Fluid....: 7368  id:(333-7700)   MKs:1 (1)
+
+Total particles: 7701 (bound=333 (fx=151 mv=44 ft=138) fluid=7368)
+Total MK blocks: 6 (bound=5 (fx=1 mv=1 ft=3) fluid=1)
+ 
+Allocated memory in CPU: 786540 (0.75 MB)
+Allocated memory in GPU: 1523291 (1.45 MB)
+Part_0100        7701 particles successfully stored
+
+[Initialising simulation (1nwi1r4i)  28-07-2020 13:00:07]
+PART       PartTime      TotalSteps    Steps    Time/Sec   Finish time        
+=========  ============  ============  =======  =========  ===================
+
+*** WARNING: 1 DTs adjusted to DtMin (t:1.00002, nstep:0)
+
+**JSphGpu: Requesting gpu memory for 8818 particles: 1.3 MB.
+**CellDiv: Requested gpu memory for 8644 particles: 0.1 MB.
+**CellDiv: Requested gpu memory for 2394 cells (CellMode=Full): 0.0 MB.
+
+*** WARNING: 10 DTs adjusted to DtMin (t:1.00023, nstep:9)
+
+
+*** WARNING: 100 DTs adjusted to DtMin (t:1.00228, nstep:99)
+
+Part_0101      1.010011           438      438     112.21  28-07-2020 13:03:51
+Part_0102      1.020000           876      438     106.69  28-07-2020 13:03:45
+
+*** WARNING: 1000 DTs adjusted to DtMin (t:1.02281, nstep:999)
+
+Part_0103      1.030012          1315      439     105.52  28-07-2020 13:03:43
+Part_0104      1.040000          1753      438     111.46  28-07-2020 13:03:44
+Part_0105      1.050012          2192      439     106.43  28-07-2020 13:03:43
+Part_0106      1.060001          2630      438     105.82  28-07-2020 13:03:42
+Part_0107      1.070012          3069      439     110.39  28-07-2020 13:03:43
+Part_0108      1.080001          3507      438     106.16  28-07-2020 13:03:43
+Part_0109      1.090013          3946      439     104.92  28-07-2020 13:03:42
+Part_0110      1.100001          4384      438     108.80  28-07-2020 13:03:42
+Part_0111      1.110023          4823      439     103.25  28-07-2020 13:03:42
+Part_0112      1.120011          5261      438     104.87  28-07-2020 13:03:41
+  Particles out: 1  (total out: 1)  -  Current np: 7700
+Part_0113      1.130000          5699      438     104.03  28-07-2020 13:03:41
+Part_0114      1.140019          6131      432     104.06  28-07-2020 13:03:40
+  Particles out: 1  (total out: 2)  -  Current np: 7699
+Part_0115      1.150023          6547      416     101.08  28-07-2020 13:03:39
+Part_0116      1.160021          6969      422      99.55  28-07-2020 13:03:39
+Part_0117      1.170011          7407      438     103.52  28-07-2020 13:03:38
+Part_0118      1.180022          7846      439     104.80  28-07-2020 13:03:38
+Part_0119      1.190017          8284      438     105.06  28-07-2020 13:03:38
+Part_0120      1.200014          8721      437     103.66  28-07-2020 13:03:38
+Part_0121      1.210010          9159      438     110.48  28-07-2020 13:03:38
+Part_0122      1.220003          9596      437     105.82  28-07-2020 13:03:38
+Part_0123      1.230015         10035      439     104.09  28-07-2020 13:03:38
+Part_0124      1.240005         10473      438     104.35  28-07-2020 13:03:38
+Part_0125      1.250018         10878      405      96.32  28-07-2020 13:03:37
+Part_0126      1.260005         11308      430     102.10  28-07-2020 13:03:37
+Part_0127      1.270020         11730      422     100.51  28-07-2020 13:03:36
+
+*** WARNING: 10000 DTs adjusted to DtMin (t:1.27462, nstep:11918)
+
+Part_0128      1.280005         12154      424     106.09  28-07-2020 13:03:36
+Part_0129      1.290003         12591      437     106.85  28-07-2020 13:03:36
+Part_0130      1.300007         13029      438     109.35  28-07-2020 13:03:37
+Part_0131      1.310018         13468      439     103.60  28-07-2020 13:03:37
+Part_0132      1.320007         13906      438     106.84  28-07-2020 13:03:37
+Part_0133      1.330019         14345      439     106.59  28-07-2020 13:03:37
+Part_0134      1.340007         14783      438     106.05  28-07-2020 13:03:37
+Part_0135      1.350019         15222      439     105.10  28-07-2020 13:03:37
+Part_0136      1.360008         15660      438     108.72  28-07-2020 13:03:37
+Part_0137      1.370019         16099      439     102.36  28-07-2020 13:03:37
+Part_0138      1.380008         16537      438     106.63  28-07-2020 13:03:37
+Part_0139      1.390020         16976      439     156.70  28-07-2020 13:03:40
+Part_0140      1.400008         17414      438     113.36  28-07-2020 13:03:41
+Part_0141      1.410020         17853      439     109.07  28-07-2020 13:03:41
+Part_0142      1.420009         18291      438     106.91  28-07-2020 13:03:40
+Part_0143      1.430020         18730      439     102.72  28-07-2020 13:03:40
+Part_0144      1.440009         19168      438     105.49  28-07-2020 13:03:40
+Part_0145      1.450021         19607      439     106.96  28-07-2020 13:03:40
+Part_0146      1.460009         20045      438     104.63  28-07-2020 13:03:40
+Part_0147      1.470021         20484      439     105.86  28-07-2020 13:03:40
+Part_0148      1.480010         20922      438     104.05  28-07-2020 13:03:40
+Part_0149      1.490021         21361      439     104.37  28-07-2020 13:03:40
+Part_0150      1.500010         21799      438     103.24  28-07-2020 13:03:39
+Part_0151      1.510021         22238      439     106.02  28-07-2020 13:03:39
+Part_0152      1.520010         22676      438     120.66  28-07-2020 13:03:40
+Part_0153      1.530022         23115      439     103.66  28-07-2020 13:03:39
+Part_0154      1.540011         23553      438     103.50  28-07-2020 13:03:40
+Part_0155      1.550022         23992      439     107.03  28-07-2020 13:03:40
+Part_0156      1.560011         24430      438     103.91  28-07-2020 13:03:40
+Part_0157      1.570022         24869      439     104.38  28-07-2020 13:03:40
+Part_0158      1.580011         25307      438     104.03  28-07-2020 13:03:40
+Part_0159      1.590023         25746      439     104.32  28-07-2020 13:03:40
+Part_0160      1.600012         26184      438     107.71  28-07-2020 13:03:40
+Part_0161      1.610000         26622      438     103.11  28-07-2020 13:03:40
+Part_0162      1.620012         27061      439     105.83  28-07-2020 13:03:39
+Part_0163      1.630001         27499      438     108.33  28-07-2020 13:03:39
+Part_0164      1.640012         27938      439     105.62  28-07-2020 13:03:39
+Part_0165      1.650001         28376      438     108.58  28-07-2020 13:03:39
+Part_0166      1.660013         28815      439     103.84  28-07-2020 13:03:39
+Part_0167      1.670001         29253      438     105.69  28-07-2020 13:03:39
+Part_0168      1.680013         29692      439     106.52  28-07-2020 13:03:39
+Part_0169      1.690002         30130      438     106.83  28-07-2020 13:03:39
+Part_0170      1.700013         30569      439     104.61  28-07-2020 13:03:39
+Part_0171      1.710002         31007      438     107.01  28-07-2020 13:03:40
+Part_0172      1.720014         31446      439     102.80  28-07-2020 13:03:40
+Part_0173      1.730002         31884      438     104.67  28-07-2020 13:03:40
+Part_0174      1.740014         32323      439     103.89  28-07-2020 13:03:40
+Part_0175      1.750001         32760      437     102.51  28-07-2020 13:03:39
+Part_0176      1.760013         33199      439     103.69  28-07-2020 13:03:39
+Part_0177      1.770001         33637      438     102.91  28-07-2020 13:03:39
+Part_0178      1.780013         34076      439     108.67  28-07-2020 13:03:39
+Part_0179      1.790002         34514      438     108.31  28-07-2020 13:03:39
+Part_0180      1.800013         34953      439     106.03  28-07-2020 13:03:39
+Part_0181      1.810002         35391      438     104.65  28-07-2020 13:03:39
+Part_0182      1.820014         35830      439     105.38  28-07-2020 13:03:39
+Part_0183      1.830002         36268      438     107.26  28-07-2020 13:03:39
+Part_0184      1.840014         36707      439     101.68  28-07-2020 13:03:39
+Part_0185      1.850003         37145      438     106.05  28-07-2020 13:03:39
+Part_0186      1.860014         37584      439     103.85  28-07-2020 13:03:39
+Part_0187      1.870003         38022      438     104.06  28-07-2020 13:03:38
+Part_0188      1.880015         38461      439     104.02  28-07-2020 13:03:38
+Part_0189      1.890003         38899      438     106.22  28-07-2020 13:03:38
+Part_0190      1.900015         39338      439     108.44  28-07-2020 13:03:38
+Part_0191      1.910004         39776      438     102.14  28-07-2020 13:03:38
+Part_0192      1.920015         40215      439     104.86  28-07-2020 13:03:39
+Part_0193      1.930004         40653      438     105.54  28-07-2020 13:03:39
+Part_0194      1.940016         41092      439     104.09  28-07-2020 13:03:39
+Part_0195      1.950004         41530      438     102.61  28-07-2020 13:03:39
+Part_0196      1.960016         41969      439     104.28  28-07-2020 13:03:39
+Part_0197      1.970005         42407      438     102.74  28-07-2020 13:03:39
+Part_0198      1.980016         42846      439     104.78  28-07-2020 13:03:39
+Part_0199      1.990005         43284      438     106.16  28-07-2020 13:03:39
+Part_0200      2.000017         43723      439     112.70  28-07-2020 13:03:39
+Part_0201      2.010005         44161      438     110.11  28-07-2020 13:03:39
+Part_0202      2.020017         44600      439     109.81  28-07-2020 13:03:39
+Part_0203      2.030006         45038      438     109.51  28-07-2020 13:03:38
+Part_0204      2.040017         45477      439     111.95  28-07-2020 13:03:38
+Part_0205      2.050006         45915      438     104.20  28-07-2020 13:03:38
+Part_0206      2.060017         46354      439     102.97  28-07-2020 13:03:38
+Part_0207      2.070006         46792      438     103.87  28-07-2020 13:03:38
+Part_0208      2.080018         47231      439     105.95  28-07-2020 13:03:39
+Part_0209      2.090007         47669      438     103.44  28-07-2020 13:03:39
+Part_0210      2.100018         48108      439     104.72  28-07-2020 13:03:39
+Part_0211      2.110007         48546      438     105.18  28-07-2020 13:03:39
+Part_0212      2.120018         48985      439     104.35  28-07-2020 13:03:39
+Part_0213      2.130007         49423      438     104.83  28-07-2020 13:03:39
+Part_0214      2.140019         49862      439     103.99  28-07-2020 13:03:39
+Part_0215      2.150008         50300      438     103.02  28-07-2020 13:03:39
+Part_0216      2.160019         50739      439     104.39  28-07-2020 13:03:39
+Part_0217      2.170008         51177      438     105.33  28-07-2020 13:03:39
+Part_0218      2.180019         51616      439     102.21  28-07-2020 13:03:38
+Part_0219      2.190008         52054      438     108.65  28-07-2020 13:03:38
+Part_0220      2.200020         52493      439     104.23  28-07-2020 13:03:38
+Part_0221      2.210009         52931      438     105.32  28-07-2020 13:03:38
+Part_0222      2.220020         53370      439     107.13  28-07-2020 13:03:38
+Part_0223      2.230009         53808      438     101.52  28-07-2020 13:03:38
+Part_0224      2.240020         54247      439     102.99  28-07-2020 13:03:38
+Part_0225      2.250009         54685      438     102.57  28-07-2020 13:03:38
+Part_0226      2.260021         55124      439     110.89  28-07-2020 13:03:38
+Part_0227      2.270009         55562      438     101.98  28-07-2020 13:03:38
+Part_0228      2.280021         56001      439     103.82  28-07-2020 13:03:38
+Part_0229      2.290010         56439      438     106.59  28-07-2020 13:03:39
+Part_0230      2.300021         56878      439     107.30  28-07-2020 13:03:39
+Part_0231      2.310010         57316      438     101.53  28-07-2020 13:03:39
+Part_0232      2.320022         57755      439     102.68  28-07-2020 13:03:38
+Part_0233      2.330010         58193      438     102.00  28-07-2020 13:03:38
+Part_0234      2.340022         58632      439     101.59  28-07-2020 13:03:38
+Part_0235      2.350011         59070      438     105.49  28-07-2020 13:03:38
+Part_0236      2.360022         59509      439     103.98  28-07-2020 13:03:38
+Part_0237      2.370011         59947      438     102.58  28-07-2020 13:03:38
+Part_0238      2.380023         60386      439     105.27  28-07-2020 13:03:38
+Part_0239      2.390011         60824      438     104.48  28-07-2020 13:03:38
+Part_0240      2.400000         61262      438     105.03  28-07-2020 13:03:38
+Part_0241      2.410012         61701      439     104.00  28-07-2020 13:03:38
+Part_0242      2.420001         62139      438     105.24  28-07-2020 13:03:38
+Part_0243      2.430012         62578      439     103.19  28-07-2020 13:03:38
+Part_0244      2.440001         63016      438     103.36  28-07-2020 13:03:38
+Part_0245      2.450012         63455      439     107.79  28-07-2020 13:03:38
+Part_0246      2.460001         63893      438     102.58  28-07-2020 13:03:38
+Part_0247      2.470013         64332      439     104.38  28-07-2020 13:03:38
+Part_0248      2.480002         64770      438     105.18  28-07-2020 13:03:37
+Part_0249      2.490013         65209      439     104.04  28-07-2020 13:03:37
+Part_0250      2.500002         65647      438     107.57  28-07-2020 13:03:37
+Part_0251      2.510013         66086      439     106.66  28-07-2020 13:03:37
+Part_0252      2.520002         66524      438     110.95  28-07-2020 13:03:38
+Part_0253      2.530014         66963      439     103.68  28-07-2020 13:03:38
+Part_0254      2.540002         67401      438     105.58  28-07-2020 13:03:38
+Part_0255      2.550014         67840      439     106.08  28-07-2020 13:03:38
+Part_0256      2.560003         68278      438     104.71  28-07-2020 13:03:38
+Part_0257      2.570014         68717      439     226.60  28-07-2020 13:03:39
+Part_0258      2.580003         69155      438     105.52  28-07-2020 13:03:39
+Part_0259      2.590015         69594      439     102.57  28-07-2020 13:03:39
+Part_0260      2.600003         70032      438     103.01  28-07-2020 13:03:39
+Part_0261      2.610015         70471      439     107.91  28-07-2020 13:03:39
+Part_0262      2.620004         70909      438     111.77  28-07-2020 13:03:39
+Part_0263      2.630015         71348      439     109.17  28-07-2020 13:03:39
+Part_0264      2.640010         71786      438     109.31  28-07-2020 13:03:40
+Part_0265      2.650022         72225      439     107.29  28-07-2020 13:03:40
+Part_0266      2.660011         72663      438     107.28  28-07-2020 13:03:40
+Part_0267      2.670022         73102      439     104.08  28-07-2020 13:03:40
+Part_0268      2.680011         73540      438     103.54  28-07-2020 13:03:40
+Part_0269      2.690023         73979      439     105.23  28-07-2020 13:03:40
+Part_0270      2.700011         74417      438     103.76  28-07-2020 13:03:39
+Part_0271      2.710000         74855      438     104.04  28-07-2020 13:03:39
+Part_0272      2.720012         75294      439     104.51  28-07-2020 13:03:39
+Part_0273      2.730000         75732      438     102.16  28-07-2020 13:03:39
+Part_0274      2.740012         76171      439     105.97  28-07-2020 13:03:39
+Part_0275      2.750001         76609      438     104.13  28-07-2020 13:03:39
+Part_0276      2.760012         77048      439     102.88  28-07-2020 13:03:39
+Part_0277      2.770001         77486      438     106.35  28-07-2020 13:03:39
+Part_0278      2.780013         77925      439     105.67  28-07-2020 13:03:39
+Part_0279      2.790001         78363      438     105.60  28-07-2020 13:03:39
+Part_0280      2.800013         78802      439     101.66  28-07-2020 13:03:39
+Part_0281      2.810002         79240      438     105.28  28-07-2020 13:03:39
+Part_0282      2.820013         79679      439     103.78  28-07-2020 13:03:39
+Part_0283      2.830002         80117      438     104.78  28-07-2020 13:03:39
+Part_0284      2.840014         80556      439     108.24  28-07-2020 13:03:40
+Part_0285      2.850002         80994      438     105.96  28-07-2020 13:03:39
+Part_0286      2.860014         81433      439     103.00  28-07-2020 13:03:39
+Part_0287      2.870003         81871      438     104.00  28-07-2020 13:03:39
+Part_0288      2.880014         82310      439     103.31  28-07-2020 13:03:39
+Part_0289      2.890003         82748      438     102.94  28-07-2020 13:03:39
+Part_0290      2.900015         83187      439     105.68  28-07-2020 13:03:39
+Part_0291      2.910003         83625      438     104.85  28-07-2020 13:03:39
+Part_0292      2.920015         84064      439     106.29  28-07-2020 13:03:39
+Part_0293      2.930004         84502      438     102.92  28-07-2020 13:03:39
+Part_0294      2.940015         84941      439     105.12  28-07-2020 13:03:39
+Part_0295      2.950004         85379      438     105.59  28-07-2020 13:03:39
+Part_0296      2.960016         85818      439     105.33  28-07-2020 13:03:39
+Part_0297      2.970004         86256      438     105.64  28-07-2020 13:03:39
+Part_0298      2.980016         86695      439     106.31  28-07-2020 13:03:39
+Part_0299      2.990005         87133      438     107.34  28-07-2020 13:03:39
+Part_0300      3.000016         87572      439     102.36  28-07-2020 13:03:39
+
+[Simulation finished  28-07-2020 13:03:39]
+Particles of simulation (initial): 7701
+DTs adjusted to DtMin............: 85331
+Excluded particles...............: 2
+Total Runtime....................: 212.681610 sec.
+Simulation Runtime...............: 212.412811 sec.
+Runtime per physical second......: 70.803886 sec.
+Steps per second.................: 412.272675
+Steps of simulation..............: 87572
+Particle Interactions Per Second.: 0.07456411 GPIPS
+Total particle interactions (f+b): 15.838372751 GPIs (1.5694e+10 + 1.4427e+08)
+PART files.......................: 201
+Maximum number of particles......: 8047
+Maximum number of cells..........: 1288
+CPU Memory.......................: 840360 (0.80 MB)
+GPU Memory.......................: 1619995 (1.54 MB)
+ 
+[GPU Timers]
+VA-Init..........................: 0.070344 sec.
+NL-Limits........................: 19.663252 sec.
+NL-PreSort.......................: 0.427157 sec.
+NL-RadixSort.....................: 14.962990 sec.
+NL-CellBegin.....................: 15.120349 sec.
+NL-SortData......................: 9.240007 sec.
+NL-OutCheck......................: 0.214051 sec.
+CF-PreForces.....................: 12.435890 sec.
+CF-Forces........................: 33.307610 sec.
+SU-Shifting......................: 0.000000 sec.
+SU-ComputeStep...................: 2.620976 sec.
+SU-Floating......................: 8.624254 sec.
+SU-Motion........................: 7.393385 sec.
+SU-Periodic......................: 22.942320 sec.
+SU-ResizeNp......................: 0.005234 sec.
+SU-DownData......................: 0.115635 sec.
+SU-SavePart......................: 0.000485 sec.
+SU-Chrono........................: 0.000000 sec.
+SU-BoundCorr.....................: 0.000000 sec.
+SU-InOut.........................: 0.000000 sec.
+ 
+[Output files]
+- CfgInit_Domain.vtk...: Saves the limits of the case and the simulation domain limits.
+- CfgInit_MapCells.vtk.: Saves the cell division of the simulation domain.
+- Run.csv..............: One line CSV file with execution parameters and other simulation data.
+- Run.out..............: Log file of the simulation.
+- data/PartFloat.fbi4..: Binary file with floating body information for each instant (input for FloatingInfo program).
+- data/PartInfo.ibi4...: Binary file with execution information for each instant (input for PartInfo program).
+- data/PartOut_???.obi4: Binary file with particles excluded during simulation (input for PartVtkOut program).
+- data/Part_????.bi4...: Binary file with particle data in different instants.
+- data/Part_Head.ibi4..: Binary file with basic information of simulation data.
+ 
+[WARNINGS]
+1. 1 DTs adjusted to DtMin (t:1.00002, nstep:0)
+2. 10 DTs adjusted to DtMin (t:1.00023, nstep:9)
+3. 100 DTs adjusted to DtMin (t:1.00228, nstep:99)
+4. 1000 DTs adjusted to DtMin (t:1.02281, nstep:999)
+5. 10000 DTs adjusted to DtMin (t:1.27462, nstep:11918)
+ 
+
+Finished execution (code=0).
+

@@ -1,0 +1,121 @@
+
+
+ <GENCASE>  Copyright (c) 2020 by Dr Jose M. Dominguez
+ All rights reserved.
+
+ DualSPHysics is an international collaboration between University of Vigo 
+ (Spain) and University of Manchester (UK). 
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ * Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of the DualSPHysics nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+
+
+GenCase v5.0.229 (29-01-2021) 
+===============================
+OmpThreads: 8
+
+[LoadXMLInit]
+List: MAIN
+
+Total operations: 8
+[LoadXMLInit-End  time:0.002s]
+
+[Draw]
+List of available variables: Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[-9.81]  Rhop0=[1000]  Dp=[0.001]  PosMin_x=[-0.005]  PosMin_y=[0]  PosMin_z=[-0.005]  PosMax_x=[0.105]  PosMax_y=[0]  PosMax_z=[0.105]  CaseName=["SPH_dev_Temperature_CPU"]  Data2D=[1]  Data2DPosy=[0]  H=[0.00169706]  MassBound=[0.001]  MassFluid=[0.001]
+
+Mk size: 1 bytes
+Case limits: (-0.005,0,-0.005) - (0.105,0,0.105)
+Distance between points (Dp): 0.001
+Case domain: (0,0,0)-(109,0,109)
+Domain points: 110 x 1 x 110 = 12100
+Case parts: 1 x 110z
+Memory: 0.00Gb 0.01Mb (12100)
+
+> MAIN
+FileShapes> _Dp.vtk  shapes:5  points:8   (time:0.001s)
+FileShapes> _Actual.vtk  shapes:5  points:8   (time:0.001s)
+<MAIN (Operations= 6+2+1 = 9)
+
+Triangles: 26 (0 ignored)
+[Draw-End  time:0.006s]
+
+[LoadsXMLConfig]
+Execution parameters.
+Initials configuration.
+Floating bodies configuration.
+Properties configuration.
+Predefined motion configuration.
+[LoadsXMLConfig-End  time:0.002s]
+
+[PreparePoints]
+Computing Vtk-Cells data...  (time:0.000s)
+BitSizeTot: 16 (1 + 7+1+7)
+Points loaded: 8221
+Sorting points by Z...
+Sorting points by Mk...
+
+List of Points:
+Points -> Fixed-Boundary particles:
+  block[  0] (mk: 10):    301  -->     301
+Points -> Fluid particles:
+  block[  1] (mk:  1):   7920  -->    7920
+
+Particle summary:
+  Fixed....: 301  id:(0-300)   MKs:1 (10)
+  Moving...: 0
+  Floating.: 0
+  Fluid....: 7920  id:(301-8220)   MKs:1 (1)
+
+Total particles: 8221 (bound=301 (fx=301 mv=0 ft=0) fluid=7920)
+Total MK blocks: 2 (bound=1 (fx=1 mv=0 ft=0) fluid=1)
+
+Maximum depth: 8 (fixed)
+Speed of system: 8.85889 (automatic)
+Speed of sound: max(coefsound*speedsystem,10*sqrt(g*depth))
+Speed of sound: 177.178 max(177.178,88.5889)
+Speed of sound: 177.178 (automatic)
+
+Coefh:1.200000 (hdp:1.697056)
+
+[PreparePoints-End  time:0.006s]
+
+[SaveCase2D]
+SPH_dev_Temperature_CPU_out/SPH_dev_Temperature_CPU_MkCells.vtk  (time:0.001s, shapes:4, points:16)
+SPH_dev_Temperature_CPU_out/SPH_dev_Temperature_CPU.bi4<double>  (time:0.001s)
+SPH_dev_Temperature_CPU_out/SPH_dev_Temperature_CPU_All.vtk  (time: 0.002s)
+SPH_dev_Temperature_CPU_out/SPH_dev_Temperature_CPU_Bound.vtk  (time: 0.001s)
+SPH_dev_Temperature_CPU_out/SPH_dev_Temperature_CPU_Fluid.vtk  (time: 0.002s)
+SPH_dev_Temperature_CPU_out/SPH_dev_Temperature_CPU.xml  (time:0.026s)
+
+Save files time: 0.035s
+
+Particle limits:
+  X range: 0 to 0.1 [m]
+  Y range: 0 to 0 [m]
+  Z range: 0 to 0.1 [m]
+
+[SaveCase2D-End  time:0.046s]
+
+
+Finished execution (code=0).
+

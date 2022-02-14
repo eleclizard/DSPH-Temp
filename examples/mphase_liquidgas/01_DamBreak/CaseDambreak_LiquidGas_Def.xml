@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<case date="09/07/2013 16:42:25">
+    <casedef>
+        <constantsdef>
+            <lattice bound="1" fluid="1"/>
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000" comment="Reference density of the fluid" units_comment="kg/m^3" /> %Not used for liquid-gas flows. Set in the properties section for each material.
+            <hswl value="0" auto="true" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" /> %Not used for liquid-gas flows.
+            <gamma value="7" comment="Polytropic constant for water used in the state equation" />	%Not used for liquid-gas flows. Set in the properties section for each material.
+            <speedsystem value="0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" /> %Not used for liquid-gas flows.
+            <coefsound value="20" comment="Coefficient to multiply speedsystem" /> %Not used for liquid-gas flows.
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" /> %Not used for liquid-gas flows. Set in the properties section for each material.
+            <coefh value="1.0" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />		
+            <cflnumber value="0.1" comment="Coefficient to multiply dt" />
+        </constantsdef>
+        <mkconfig boundcount="20" fluidcount="2"/>
+        <geometry>
+            <definition dp="0.004">
+                <pointmin x="-2.5" y="0" z="-1" />
+                <pointmax x="2.5" y="0" z="1.5" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>real | dp | fluid | bound | void</setshapemode>
+                    <setdrawmode mode="full" />
+                    <setmkfluid mk="0" name="Water" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="-1.3415" y="-0.01" z="-0.5" />
+                        <size x="1.0" y="0.02" z="0.5" />
+                    </drawbox>
+                    <shapeout file="Water" />
+                    <setmkfluid mk="1" name="Air" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="-1.3415" y="-0.01" z="-0.0" />
+                        <size x="2.683" y="0.02" z="0.5" />
+                    </drawbox>
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="-0.3415" y="-0.01" z="-0.5" />
+                        <size x="1.683" y="0.02" z="0.5" />
+                    </drawbox>
+                    <shapeout file="Air" />
+                    <setdrawmode mode="face" />
+                    <setmkbound mk="0" name="Wall" />
+                    <drawbox>
+                        <boxfill>top | bottom | left | right </boxfill>
+                        <point x="-1.3415" y="-0.01" z="-0.5" />
+                        <size x="2.683" y="0.02" z="1.0" />
+                    </drawbox>                    
+					<drawbox>
+                        <boxfill>top | bottom | left | right </boxfill>
+                        <point x="-1.345" y="-0.01" z="-0.504" />
+                        <size x="2.69" y="0.02" z="1.008" />
+                    </drawbox>
+					<drawbox>
+                        <boxfill>top | bottom | left | right </boxfill>
+                        <point x="-1.349" y="-0.01" z="-0.508" />
+                        <size x="2.698" y="0.02" z="1.016" />
+                    </drawbox>					
+                    <shapeout file="Wall" />
+                </mainlist>
+            </commands>
+        </geometry>		
+		<properties> %Material properties for liquid-gas flows are set here.
+			<links>
+				<link mkbound="0" property="water"/>
+				<link mkfluid="0" property="water" />
+				<link mkfluid="1" property="air" />
+				</links>
+			<property name="water">
+				<rhop0 value="1000"/>
+				<gamma value="7"/>
+				<cs0 value="24.14"/>
+				<visco value="0.03"/>
+				<phasetype value="0"/>
+			</property>
+			<property name="air">
+				<rhop0 value="1.18"/>
+				<gamma value="1.4"/>
+				<cs0 value="343.28"/>
+				<visco value="0.03"/>
+				<phasetype value="1"/>
+			</property>		
+		</properties>
+    </casedef>
+    <execution>
+        <parameters>
+            <parameter key="PosDouble" value="1" comment="Precision in particle interaction 0:Simple, 1:Double, 2:Uses and saves double (default=0)" />
+			<parameter key="FlowType" value="2" comment="Select Single-phase (1) or liquid-gas flow(2)" />			
+            <parameter key="StepAlgorithm" value="1" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping (default=40)" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (default=2)" />			
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
+            <parameter key="Visco" value="0.0" comment="Viscosity value" /> % Note it is not used for multi-phase flows. The "visco" variable in the properties section will be used instead
+            <parameter key="ViscoBoundFactor" value="1" comment="Multiply viscosity value with boundary (default=1)" />
+            <parameter key="DeltaSPH" value="0.1" comment="DeltaSPH value, 0.1 is the typical value, with 0 disabled (default=0)" />
+            <parameter key="Shifting" value="3" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
+            <parameter key="ShiftCoef" value="-6" comment="Coefficient for shifting computation (default=-2)" />
+            <parameter key="ShiftTFS" value="1.5" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
+			<parameter key="MPCoefficient" value="1" comment="Colagrossi and Landrini multiphase coefficient." />			
+            <parameter key="RigidAlgorithm" value="1" comment="Rigid Algorithm 0:collision-free, 1:SPH, 2:DEM (default=1)" />
+            <parameter key="#FtPause" value="0.0" comment="Time to freeze the floatings at simulation start (warmup) (default=0)" units_comment="seconds" />
+            <parameter key="#CoefDtMin" value="0.05" comment="Coefficient to calculate minimum time step dtmin=coefdtmin*h/speedsound (default=0.05)" />
+            <parameter key="DtIni" value="0.0000001" comment="Initial time step (default=h/speedsound)" units_comment="seconds" />
+            <parameter key="DtMin" value="0.00000001" comment="Minimum time step (default=coefdtmin*h/speedsound)" units_comment="seconds" />
+            <parameter key="#DtFixed" value="DtFixed.dat" comment="Dt values are loaded from file (default=disabled)" />
+            <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
+            <parameter key="TimeMax" value="3" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.01" comment="Time out data" units_comment="seconds" />
+            <parameter key="IncZ" value="2" comment="Increase of Z+" units_comment="decimal" />
+            <parameter key="PartsOutMax" value="1" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
+            <parameter key="RhopOutMin" value="0" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />			
+        </parameters>
+    </execution>
+</case>

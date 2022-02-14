@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase v5.0.165 (24-03-2020)" date="24-03-2020 20:29:27">
+    <casedef requiredversion="v5.0.165">
+        <constantsdef>
+            <lattice bound="1" fluid="1" />
+            <gravity x="0.0" y="0.0" z="-9.8065" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000.0" comment="Reference density of the fluid" units_comment="kg/m^3" />
+            <hswl value="0.0" auto="true" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" />
+            <gamma value="7.0" comment="Polytropic constant for water used in the state equation" />
+            <speedsystem value="0.0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" />
+            <coefsound value="20.0" comment="Coefficient to multiply speedsystem" />
+            <speedsound value="0.0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
+            <coefh value="1.2" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
+            <cflnumber value="0.2" comment="Coefficient to multiply dt" />
+            <h value="0.0" auto="true" units_comment="metres (m)" />
+            <b value="0.0" auto="true" units_comment="Pascal (Pa)" />
+            <massbound value="0" auto="true" units_comment="kg" />
+            <massfluid value="0" auto="true" units_comment="kg" />
+        </constantsdef>
+        <mkconfig boundcount="241" fluidcount="2" />
+        <geometry>
+            <predefinition>
+                <!-- User-defined variables  -->
+                <newvarcte case3d="false" _rem="Defines case 3D or 2D" />
+                <newvarcte use_awas="true" _rem="Activates the use of AWAS" />
+                <newvarcte use_damping="true" _rem="Activates the use of Damping" />
+                <newvarcte use_beach="true" _rem="Creates an absorption beach" />
+                <newvarcte depth="2.6" _rem="Water level" />
+                <newvarcte wperiod="2.0" wheight="0.14" _rem="Wave parameters: Period and Wave height" />
+                <newvarcte ang="25" _rem="Beach angle (if not beach ang = 90)" />
+                <newvarcte pt="5" _rem="Piston thickness in particles (pt)" />
+                <newvarcte n_up="1" n_down="0" _rem="Number of wave length upstream and downstream" />
+                <newvarcte tankw="1.0" _rem="Basin (tank) width for 3-D cases" />
+                <!-- Auxiliary variables  -->
+                <newvarcte wlen="wavelength(-Gravity_z,depth,wperiod)" _rem="Wave length" _print="1" />
+                <newvarcte sk="wlen*0.3" _rem="Maximum stroke displacement" _print="1" />
+                <newvarcte tankh="depth+wheight*2" _rem="Basin (tank) height" _print="1" />
+                <newvarcte tankx="wlen*(n_up+1+n_down)" _rem="Basin (tank) length" _print="1" />
+                <newvarcte dlen="eval(use_beach,tankh/tandg(ang),wlen*0.5)" _rem="Beach or damping zone length" _print="1" />
+                <newvarcte tankxtot="sk+tankx+dlen" _rem="Total basin (tank) length" _print="1" />
+                <newvarcte modelx="(n_up+0.5)*wlen" _rem="Distance between wave paddle and model center" _print="1" />
+            </predefinition>
+            <definition dp="0.02" comment="Initial inter-particle distance" units_comment="metres (m)">
+                <pointmin x="#-modelx-sk-Dp" y="#eval(case3d,-tankw/2-Dp*pt,0)" z="#-depth-Dp*pt" />
+                <pointmax x="#-modelx+tankxtot" y="#eval(case3d,tankw/2+Dp*pt,0)" z="#wheight*2+Dp" />
+            </definition>
+            <commands>
+                <list name="TankWall" printcall="false">
+                    <setshapemode if="#walln>0">bound</setshapemode>
+                    <drawpolygon>
+                        <point x="#-sk" y="#wallx" z="#-dpt" />
+                        <point x="#tankx" y="#wallx" z="#-dpt" />
+                        <point x="#tankx+eval(use_beach,(dlen+dpt)/2,dlen+dpt)" y="#wallx" z="#eval(use_beach,tankh/2,-dpt)" />
+                        <point x="#tankx+dlen+dpt" y="#wallx" z="#tankh" />
+                        <point x="#-sk" y="#wallx" z="#tankh" />
+                    </drawpolygon>
+                    <setvar wallx="wallx+wallix" />
+                    <setvar walln="walln+1" />
+                    <setshapemode>actual | bound</setshapemode>
+                </list>
+                <mainlist>
+                    <!-- Select variables used by DualSPHysics -->
+                    <exportvar vars="depth,wperiod,wheight,use_awas,use_damping,tankx,dlen,modelx" />
+                    <!-- Check angle for beach -->
+                    <abort if="use_beach @@ (ang<2 || ang>90)" text="Beach angle (#ang#) is not in the range [1-90].\n It is invalid." />
+                    <!-- Show wave non-dimensional parameters -->
+                    <newvarcte Ur="(wheight*pow(wlen,2))/(pow(depth,2))" _rem="Ursell number" />
+                    <printf text="==>> Wave steepness parameter..: #wheight/wlen#" />
+                    <printf text="==>> Wave shallowness parameter: #depth/wlen#" />
+                    <printf text="==>> Ursell number.............: #Ur#" />
+                    <newvarcte dpt="(pt-1)*Dp" _rem="Piston thickness in metres" />
+                    <!-- <printf text="Punto final de playa #fx#" /> -->
+                    <_printf text="==>>Damping  limitmin=#tx-(n_up+0.5)*wl#  limitmax=#tL-(n_up+0.5)*wl#" />
+                    <setshapemode>actual | bound</setshapemode>
+                    <setdrawmode mode="full" />
+                    <!-- Simulation is centered on the position of the model -->
+                    <move x="#-modelx" y="0" z="#-depth" />
+                    <!-- Piston -->
+                    <setmkbound mk="2" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="#-dpt" y="#-0.5*tankw" z="0" />
+                        <size x="#dpt" y="#tankw" z="#tankh" />
+                    </drawbox>
+                    <!-- Tank -->
+                    <setmkbound mk="0" />
+                    <drawextrude closed="false">
+                        <point x="#-sk" y="#-0.5*tankw" z="0" />
+                        <point x="#tankx" y="#-0.5*tankw" z="0" />
+                        <point x="#tankx+eval(use_beach,dlen/2,dlen)" y="#-0.5*tankw" z="#eval(use_beach,tankh/2,0)" />
+                        <point x="#tankx+dlen" y="#-0.5*tankw" z="#tankh" />
+                        <extrude x="0" y="#tankw" z="0" />
+                        <layers vdp="0*,-1,-2,-3" />
+                    </drawextrude>
+                    <!-- Tank walls only for 3-D cases -->
+                    <newvar wallx="-0.5*tankw" wallix="-Dp" walln="0" />
+                    <runlist name="TankWall" times="#eval(case3d,pt,0)" />
+                    <setvar wallx="0.5*tankw" wallix="Dp" walln="0" />
+                    <runlist name="TankWall" times="#eval(case3d,pt,0)" />
+                    <!-- Fluid -->
+                    <setmkfluid mk="0" />
+                    <fillbox x="#0.5*wlen" y="0" z="#0.5*depth">
+                        <modefill>void</modefill>
+                        <point x="0" y="#-0.5*tankw" z="0" />
+                        <size x="#tankxtot+1" y="#tankw" z="#depth" />
+                    </fillbox>
+                    <matrixreset />
+                    <!-- Model -->
+                    <setmkbound mk="1" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="-0.3" y="#-0.2*tankw" z="-0.2" />
+                        <size x="0.6" y="#0.4*tankw" z="0.4" />
+                    </drawbox>
+                    <shapeout file="" />
+                </mainlist>
+            </commands>
+        </geometry>
+        <motion>
+            <objreal ref="2">
+                <begin mov="1" start="0" />
+                <mvnull id="1" />
+            </objreal>
+        </motion>
+    </casedef>
+    <execution>
+        <special>
+            <wavepaddles>
+                <piston>
+                    <mkbound value="2" comment="Mk-Bound of selected particles" />
+                    <start value="0" comment="Start time (default=0)" />
+                    <duration value="0.0" comment="Movement duration, Zero is the end of simulation (default=0)" />
+                    <depth value="#depth" comment="Water depth (default=0)" />
+                    <pistondir x="1.0" y="0.0" z="0.0" comment="Movement direction (default=(1,0,0))" />
+                    <waveorder value="2" comment="Order wave generation 1:1st order, 2:2nd order (default=1)" />
+                    <waveheight value="#wheight" comment="Wave height" />
+                    <waveperiod value="#wperiod" comment="Wave period" />
+                    <phase value="0.0" comment="Initial wave phase in function of PI (default=0)" />
+                    <ramp value="1.0" comment="Periods of ramp (default=0)" />
+                    <savemotion xpos="#modelx" zpos="-0.15" comment="Saves motion data. xpos and zpos are optional. zpos=-depth of the measuring point" />
+                    <awas_zsurf active="#use_awas">
+                        <startawas value="#wperiod" comment="Time to start AWAS correction (default=start+ramp*waveperiod)" />
+                        <swl value="0" comment="Still water level (free-surface water)" />
+                        <elevation value="2" comment="Order wave to calculate elevation 1:1st order, 2:2nd order (default=2)" />
+                        <_gaugex value="0.05" comment="Position in X from piston to measure free-surface water (default=5*Dp)" />
+                        <gaugey value="0" comment="Position in Y to measure free-surface water" />
+                        <gaugezmin value="#-2*wheight" comment="Minimum position in Z to measure free-surface water, it must be in water (default=domain limits)" />
+                        <gaugezmax value="#2*wheight" comment="Maximum position in Z to measure free-surface water (default=domain limits)" />
+                        <gaugedp value="0.25" comment="Resolution to measure free-surface water, it uses Dp*gaugedp (default=0.1)" />
+                        <_coefmasslimit value="0.4" comment="Coefficient to calculate mass of free-surface (default=0.5 on 3D and 0.4 on 2D)" />
+                        <savedata value="0" comment="Saves CSV with information 1:by part, 2:more information, 3:by step (default=0)" />
+                        <limitace value="2" comment="Factor to limit maximum value of acceleration, with 0 disabled (default=2)" />
+                        <_correction coefstroke="1.8" coefperiod="1" powerfunc="3" comment="Drift correction configuration (default=no applied)" />
+                    </awas_zsurf>
+                </piston>
+            </wavepaddles>
+            <damping active="#use_damping">
+                <dampingzone>
+                    <limitmin x="#tankx-modelx" y="0" z="0" comment="Location where minimum reduction is applied" />
+                    <limitmax x="#tankx+dlen-modelx" y="0" z="0" comment="Location where maximum reduction is applied" />
+                    <overlimit value="1" comment="The scope of maximum reduction over limitmax (default=0)" />
+                    <redumax value="10" comment="Maximum reduction in location limitmax (default=10)" />
+                    <factorxyz x="1" y="1" z="1" comment="Application factor in components (default x=1,y=1,z=1)" />
+                </dampingzone>
+            </damping>
+        </special>
+        <parameters>
+            <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />
+            <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping (default=40)" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (default=2)" />
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
+            <parameter key="Visco" value="0.01" comment="Viscosity value" />
+            <parameter key="ViscoBoundFactor" value="0" comment="Multiply viscosity value with boundary (default=1)" />
+            <parameter key="DensityDT" value="3" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
+            <parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
+            <parameter key="Shifting" value="0" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
+            <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
+            <parameter key="ShiftTFS" value="0" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
+            <parameter key="RigidAlgorithm" value="1" comment="Rigid Algorithm 0:collision-free, 1:SPH, 2:DEM, 3:CHRONO (default=1)" />
+            <parameter key="FtPause" value="0.0" comment="Time to freeze the floatings at simulation start (warmup) (default=0)" units_comment="seconds" />
+            <parameter key="CoefDtMin" value="0.05" comment="Coefficient to calculate minimum time step dtmin=coefdtmin*h/speedsound (default=0.05)" />
+            <parameter key="DtIni" value="0" comment="Initial time step. Use 0 to defult use (default=h/speedsound)" units_comment="seconds" />
+            <parameter key="DtMin" value="0" comment="Minimum time step. Use 0 to defult use (default=coefdtmin*h/speedsound)" units_comment="seconds" />
+            <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
+            <parameter key="TimeMax" value="10.0" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.05" comment="Time out data" units_comment="seconds" />
+            <parameter key="PartsOutMax" value="1.0" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
+            <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
+            <simulationdomain comment="Defines domain of simulation (default=Uses minimun and maximum position of the generated particles)">
+                <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
+                <posmax x="default" y="default" z="default" />
+            </simulationdomain>
+        </parameters>
+        <particles np="102780" nb="5658" nbf="4938" mkboundfirst="3" mkfluidfirst="1">
+            <_summary>
+                <positions units_comment="metres (m)">
+                    <posmin x="-11.1243" y="0" z="-2.66" />
+                    <posmax x="9.2957" y="0" z="0.28" />
+                </positions>
+                <fixed count="4938" id="0-4937" mkcount="2" mkvalues="3-4" />
+                <moving count="720" id="4938-5657" mkcount="1" mkvalues="5" />
+                <fluid count="97122" id="5658-102779" mkcount="1" mkvalues="1" />
+            </_summary>
+            <fixed mkbound="0" mk="3" begin="0" count="4287" />
+            <fixed mkbound="1" mk="4" begin="4287" count="651" />
+            <moving mkbound="2" mk="5" begin="4938" count="720" refmotion="0" />
+            <fluid mkfluid="0" mk="1" begin="5658" count="97122" />
+        </particles>
+        <constants>
+            <data2d value="true" />
+            <data2dposy value="0" units_comment="metres (m)" />
+            <gravity x="0" y="0" z="-9.8065" units_comment="m/s^2" />
+            <cflnumber value="0.2" />
+            <gamma value="7" />
+            <rhop0 value="1000" units_comment="kg/m^3" />
+            <dp value="0.02" units_comment="metres (m)" />
+            <h value="3.3941125497E-02" units_comment="metres (m)" />
+            <b value="1.4345508571E+06" units_comment="Pascal (Pa)" />
+            <massbound value="4.0000000000E-01" units_comment="kg" />
+            <massfluid value="4.0000000000E-01" units_comment="kg" />
+        </constants>
+        <uservars>
+            <varnum name="depth" value="2.6" />
+            <varnum name="dlen" value="6.17618" />
+            <varnum name="modelx" value="9.27025" />
+            <varnum name="tankx" value="12.3603" />
+            <varnum name="use_awas" value="1" />
+            <varnum name="use_damping" value="1" />
+            <varnum name="wheight" value="0.14" />
+            <varnum name="wperiod" value="2" />
+        </uservars>
+        <motion>
+            <objreal ref="0">
+                <begin mov="1" start="0" />
+                <mvnull id="1" />
+            </objreal>
+        </motion>
+        <vtkout mkboundfirst="3" mkfluidfirst="1">
+            <vtkfile name="GenericWaveTank__Actual.vtk" mk="3-5" mkbound="0-2" />
+        </vtkout>
+    </execution>
+</case>

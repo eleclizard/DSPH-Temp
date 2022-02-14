@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase4 v4.0.038 (23-01-2017)" date="08-03-2017 15:47:53">
+    <casedef>
+        <constantsdef>            
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" />
+            <cflnumber value="0.2" comment="Coefficient to multiply Dt" />
+            <hswl value="0" auto="true" comment="Maximum still water level to calculate speedofsound using coefsound" />
+            <speedsystem value="0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" />
+            <coefsound value="20" comment="Coefficient to multiply speedsystem" />
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
+            <coefh value="1.2" comment="Coefficient to calculate the smoothing length (H=coefficient*sqrt(3*dp^2) in 3D)" />
+            <gamma value="7" comment="Politropic constant for water used in the state equation" />
+            <rhop0 value="1000" comment="Reference density of the fluid" />
+        </constantsdef>
+        <mkconfig boundcount="230" fluidcount="9">
+            <mkorientfluid mk="0" orient="Xyz" />
+        </mkconfig>
+        <geometry>
+            <definition dp="0.005">
+                <pointmin x="-1" y="0" z="-0.1" />
+                <pointmax x="12" y="0" z="0.75" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>real | bound</setshapemode>
+                    <setdrawmode mode="full" />
+                    <setmkbound mk="10" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0.2" y="-1" z="0" />
+                        <size x="0.005" y="2" z="1.8" />
+                    </drawbox>
+                    <setmkbound mk="0" />
+                    <drawprism mask="1|2|3|6">
+                        <point x="0.0" y="-1" z="1.8" />
+                        <point x="0.0" y="-1" z="0.0" />
+                        <point x="5.0" y="-1" z="0" />
+                        <point x="12.0" y="-1" z="1.8" />
+                        <point x="0.0" y="1" z="1.8" />
+                        <point x="0.0" y="1" z="0.0" />
+                        <point x="5.0" y="1" z="0" />
+                        <point x="12.0" y="1" z="1.8" />
+                    </drawprism>
+                    <setmkbound mk="50" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="1.85" y="-1" z="0.3" />
+                        <size x="0.3" y="2" z="0.2" />
+                    </drawbox>
+                    <setmkfluid mk="0" />
+                    <fillbox x="1" y="0" z="0.1">
+                        <modefill>void</modefill>
+                        <point x="-0.2" y="-1" z="-0.05" />
+                        <size x="13.2" y="2" z="0.45" />
+                    </fillbox>
+                    <shapeout file="" reset="true" />
+                </mainlist>
+            </commands>
+        </geometry>
+        <floatings>
+            <floating mkbound="50" relativeweight="0.5">
+                <_massbody value="0.986" />
+                <center x="2" y="0" z="0.405" />
+                <_inertia x="20" y="22" z="24" />
+            </floating>
+        </floatings>
+        <motion>
+            <objreal ref="10">
+                <begin mov="1" start="0" />
+                <mvnull id="1" />
+            </objreal>
+        </motion>
+    </casedef>
+    <execution>
+        <special>
+            <wavepaddles>
+                <piston>
+                    <mkbound value="10" comment="Mk-Bound of selected particles" />
+                    <waveorder value="2" comment="Order wave generation 1:1st order, 2:2nd order (def=1)" />
+                    <start value="0" comment="Start time (def=0)" />
+                    <duration value="0.0" comment="Movement duration, Zero is the end of simulation (def=0)" />
+                    <depth value="0.4" comment="Fluid depth (def=0)" />
+                    <_fixeddepth value="0" comment="Fluid depth without paddle (def=0)" />
+                    <pistondir x="1" y="0" z="0" comment="Movement direction (def=(1,0,0))" />
+                    <waveheight value="0.10" comment="Wave height" />
+                    <waveperiod value="1.2" comment="Wave period" />
+                    <phase value="0" comment="Initial wave phase in function of PI (def=0)" />
+                    <ramp value="0" comment="Periods of ramp (def=0)" />
+                    <savemotion periods="24" periodsteps="20" xpos="4.6" zpos="-0.15" comment="Saves motion data. xpos and zpos are optional. zpos=-depth of the measuring point" />
+                </piston>
+            </wavepaddles>
+        </special>
+        <parameters>
+            <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />		
+            <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (def=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Eulerian equations (def=40)" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (def=1)" />
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity Formulation 1:Artificial, 2:Laminar+SPS (def=1)" />
+            <parameter key="Visco" value="0.01" comment="Viscosity value" />
+            <parameter key="ViscoBoundFactor" value="0" comment="Multiply viscosity value with boundary" />
+			<parameter key="DensityDT" value="2" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
+			<parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
+            <parameter key="CoefDtMin" value="0.05" comment="Coefficient to calculate minimum time step dtmin=coefdtemin*h/speedsound (def=0.05)" />
+            <parameter key="DtIni" value="0" comment="Initial time step. Use 0 to defult use (default=h/speedsound)" units_comment="seconds" />
+            <parameter key="DtMin" value="0" comment="Minimum time step. Use 0 to defult use (default=coefdtmin*h/speedsound)" units_comment="seconds" />
+            <parameter key="DtFixed" value="0" comment="Fixed Dt value. Use 0 to disable (default=disabled)" units_comment="seconds" />
+            <parameter key="DtFixedFile" value="NONE" comment="Dt values are loaded from file. Use NONE to disable (default=disabled)" units_comment="milliseconds (ms)" />
+            <parameter key="TimeMax" value="13.5" comment="Time of simulation" />
+            <parameter key="TimeOut" value="0.05" comment="Time between output files" />
+            <parameter key="PartsOutMax" value="1" comment="Allowed percentage of fluid particles out the domain (def=1)" />
+            <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (def=700)" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (def=1300)" />
+            <simulationdomain comment="Defines domain of simulation (default=Uses minimun and maximum position of the generated particles)">
+                <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
+                <posmax x="default" y="default" z="default" />
+            </simulationdomain>
+        </parameters>
+    </execution>
+</case>

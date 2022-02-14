@@ -1,0 +1,10 @@
+^E:\DOCTOR_OF_PHILOSOPHY\DUALSPHYSICS_V5.0_TEMPERATURE\SRC\SOURCE\OUT\BUILD\CMAKEFILES\96F29A57214A049F6711F4E4A01D3CC6\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source -BE:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/DualSPHysics.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

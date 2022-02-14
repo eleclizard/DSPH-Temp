@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JXml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\tinystr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\tinyxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\tinyxmlerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\tinyxmlparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotionList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotionMov.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotionObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMotionPos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsMotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\Functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\FunGeo3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\FunSphKernelsCfg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JAppInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JBinaryData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCfgRunBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDataArrays.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JLinearValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JLog2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JOutputCsv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JRadixSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JRangeFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JReadDatafile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSaveCsv2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JTimeControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\randomc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsphConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsPips.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartDataBi4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartDataHead.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartFloatBi4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartOutBi4Save.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseCtes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseEParms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseParts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseUserVars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCaseVtkOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JArraysCpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCellDivCpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCfgRun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JComputeMotionRef.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsDamping.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsGaugeItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsGaugeSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsPartsOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsSaveDt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphShifting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsAccInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsInitialize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphMk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsPartsInit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsFixedDt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsViscoInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsOutputTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JFtMotionSave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JWaveAwasZsurf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JWaveSpectrumGpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCellDivCpuSingle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartsLoad4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCpuSingle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\FunctionsCuda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JObjectGpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JArraysGpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDebugSphGpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCellDivGpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphGpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCellDivGpuSingle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphGpuSingle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JMLPistonsGpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JRelaxZonesGpu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JChronoObjects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsMooredFloatings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsFtForcePoints.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCpu_InOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphCpuSingle_InOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphBoundCorr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutZone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutGridData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutPoints.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutVel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutVelAwas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphInOutZsurf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSimpleNeigs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphGpuSingle_InOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JPartNormalData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JNormalsMarrone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCellDivGpu_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JCellDivGpuSingle_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsPips_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsGauge_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JReduSum_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphShifting_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JDsAccInput_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphGpu_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JSphGpuSimple_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JWaveOrder2_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\JRelaxZone_ker.cu">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JCellDivGpu_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JCellDivGpuSingle_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JDsPips_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JDsGauge_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JReduSum_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JSphShifting_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JDsAccInput_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JSphGpuSimple_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JWaveOrder2_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\Doctor_of_Philosophy\DualSPHysics_v5.0_Temperature\src\source\out\build\CMakeFiles\DualSPHysics5.0_win64.dir\$(Configuration)\DualSPHysics5.0_win64_generated_JRelaxZone_ker.cu.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Files">
+      <UniqueIdentifier>{3CCAB78B-21A6-3DD4-AA33-BCFF6A34420F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{BACFAF8C-1996-3543-A302-394EC55C8F5C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

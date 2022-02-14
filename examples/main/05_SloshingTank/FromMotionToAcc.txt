@@ -1,0 +1,17 @@
+For CaseSloshingAcc, the box does not move, the orientation of the gravity vector changes. 
+The linear acceleration vector (LinearAccx, LinearAccy, LinearAccz) in CaseSloshingAccData is that gravity vector. 
+
+
+For CaseSloshingMotion, the box itself does a rotating motion while the gravity vector is constant; 
+the angle (say f) is moving compared to the initial position and it is given by CaseSloshingMotionData. 
+_Sloshing_Rotation also shows the new position of the corner.
+
+
+This angle f is the same angle used to find the x, y and z components of the gravity vector in CaseSloshingAcc. 
+Essentially LinearAccx=9.81*sinf and LinearAccz=9.81*cosf similar to how you find the positions in _Sloshing_Rotation.
+The angular acceleration can be found from the angle f through difference schemes, as AngAcc=d (df/dt)/dt. 
+There is no need to do that however, as the acceleration has already been provided by the people doing the experiment for the SPHERIC Benchmark 
+and it is available in the SPHERIC website. We simply used rad/s instead of deg/s.
+
+The Center of Acceleration is the pivoting point of the box, where the torque for moving the box is applied. 
+It is the only point whose coordinates do not change in CaseSloshingMotion and it is at the center of the bottom of the box.

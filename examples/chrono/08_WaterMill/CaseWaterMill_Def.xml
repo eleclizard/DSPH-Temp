@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case app="GenCase4 v4.0.033 (14-11-2016)" date="09-05-2017 10:34:27">
+    <casedef>
+        <constantsdef>
+            <gravity x="0.15" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000" comment="Reference density of the fluid" units_comment="kg/m^3" />
+            <hswl value="0" auto="true" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" />
+            <gamma value="7" comment="Polytropic constant for water used in the state equation" />
+            <speedsystem value="0" auto="true" comment="Maximum system speed (by default the dam-break propagation is used)" />
+            <coefsound value="20" comment="Coefficient to multiply speedsystem" />
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation (by default speedofsound=coefsound*speedsystem)" />
+            <coefh value="1.5" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
+            <cflnumber value="0.2" comment="Coefficient to multiply dt" />
+        </constantsdef>
+        <mkconfig boundcount="230" fluidcount="9">
+            <mkorientfluid mk="0" orient="Xyz" />
+        </mkconfig>
+        <geometry>
+            <definition dp="0.025" comment="Initial inter-particle distance" units_comment="metres (m)">
+                <pointmin x="0.0" y="0.0" z="-0.3" />
+                <pointmax x="10.0" y="2.1" z="6.2" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>real | bound</setshapemode>
+                    <setdrawmode mode="full" />
+                    <!-- Channels -->
+                    <setmkbound mk="0" />
+                    <drawfilestl file="CaseWaterMill_Channel1.stl">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                    </drawfilestl>
+                    <matrixreset />
+                    <drawfilestl file="CaseWaterMill_Channel2.stl">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                    </drawfilestl>
+                    <matrixreset />                    
+                    <move x="0.0" y="0.0" z="-0.2" />
+                    <rotate ang="0.0" x="-0.0" y="-0.0" z="-1.0" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="0" y="0" z="0" />
+                        <size x="0.1" y="2.0" z="1.0" />
+                    </drawbox>
+                    <matrixreset />
+                    <shapeout file="channels" />
+                    <!-- Weel -->
+                    <matrixreset />
+                    <setmkbound mk="1" />
+                    <setdrawmode mode="solid" />
+                    <drawfilestl file="CaseWaterMill_Weel.stl">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                        <drawmove x="2.0" y="0.0" z="0.0" />
+                    </drawfilestl>
+                    <matrixreset />
+                    <fillbox x="5.5" y="0.7" z="3.0">
+                        <modefill>void</modefill>
+                        <point x="0" y="0" z="0" />
+                        <size x="10.0" y="3.0" z="7.0" />
+                    </fillbox>
+                    <shapeout file="weel" />					
+                    <!-- Buckets -->
+                    <setmkbound mk="2" />
+                    <setdrawmode mode="solid" />
+                    <drawfilestl file="CaseWaterMill_Bucket.stl">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                        <drawmove x="2.0" y="0.0" z="0.0" />
+                    </drawfilestl>
+                    <matrixreset />
+                    <fillbox x="5.05" y="1.1" z="0.90">
+                        <modefill>void</modefill>
+                        <point x="0" y="0" z="0" />
+                        <size x="10.0" y="3.0" z="7.0" />
+                    </fillbox>
+                    <matrixreset />					
+                    <setmkbound mk="3" />
+                    <setdrawmode mode="solid" />
+                    <drawfilestl file="CaseWaterMill_Bucket.stl">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                        <drawmove x="2.0" y="0.0" z="3.7" />
+                    </drawfilestl>
+                    <fillbox x="5.05" y="1.1" z="3.90">
+                        <modefill>void</modefill>
+                        <point x="0" y="0" z="0" />
+                        <size x="10.0" y="3.0" z="7.0" />
+                    </fillbox>
+                    <matrixreset />					
+                    <setmkbound mk="4" />
+                    <setdrawmode mode="solid" />
+                    <drawfilestl file="CaseWaterMill_Bucket.stl">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                        <drawmove x="3.850" y="0.0" z="1.850" />
+                    </drawfilestl>
+                    <fillbox x="6.90" y="1.1" z="2.5">
+                        <modefill>void</modefill>
+                        <point x="0" y="0" z="0" />
+                        <size x="10.0" y="3.0" z="7.0" />
+                    </fillbox>
+                    <matrixreset />					
+                    <setmkbound mk="5" />
+                    <setdrawmode mode="solid" />
+                    <drawfilestl file="CaseWaterMill_Bucket.stl">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                        <drawmove x="0.150" y="0.0" z="1.850" />
+                    </drawfilestl>
+                    <fillbox x="4.10" y="1.1" z="2.5">
+                        <modefill>void</modefill>
+                        <point x="0" y="0" z="0" />
+                        <size x="10.0" y="3.0" z="7.0" />
+                    </fillbox>
+                    <shapeout file="buckets" />
+                    <matrixreset />					
+                    <setmkfluid mk="0" />
+                    <setdrawmode mode="solid" />
+                    <move x="0.0" y="0.0" z="5.0" />
+                    <rotate ang="0.0" x="-0.0" y="-0.0" z="-1.0" />
+                    <fillbox x="0.5" y="1.0" z="0.2">
+                        <modefill>void</modefill>
+                        <point x="0" y="0" z="0" />
+                        <size x="3.0" y="2.0" z="0.5" />
+                    </fillbox>
+                    <matrixreset />
+                    <!-- Fluid -->
+                    <setmkfluid mk="0" />
+                    <setdrawmode mode="solid" />
+                    <move x="5.0" y="0.0" z="-0.2" />
+                    <rotate ang="0.0" x="-0.0" y="-0.0" z="-1.0" />
+                    <fillbox x="1.5" y="0.5" z="0.4">
+                        <modefill>void</modefill>
+                        <point x="-5.0" y="0" z="0" />
+                        <size x="10.0" y="2.0" z="0.5" />
+                    </fillbox>
+                    <matrixreset />
+                    <setmkfluid mk="0" />
+                    <setdrawmode mode="solid" />
+                    <move x="4.85" y="0.0" z="2.0" />
+                    <rotate ang="0.0" x="-0.0" y="-0.0" z="-1.0" />
+                    <fillbox x="0.65" y="0.9" z="0.6">
+                        <modefill>void</modefill>
+                        <point x="0" y="0" z="0" />
+                        <size x="1.0" y="2.0" z="0.5" />
+                    </fillbox>
+                    <shapeout file="" reset="true" />
+                </mainlist>
+            </commands>
+        </geometry>
+        <floatings>
+            <floating mkbound="1-5" rhopbody="40.0" property="steel" />
+        </floatings>
+        <properties>
+            <propertyfile file="Floating_Materials.xml" path="materials" />
+            <links>
+                <link mkbound="0" property="steel" comment="Property for the fixed bound" />
+            </links>
+        </properties>
+    </casedef>
+    <execution>
+        <special>
+            <chrono>
+                <_savedata value="0.01" comment="Saves CSV with data exchange for each time interval (0=all steps)" />
+                <schemescale value="1" comment="Scale used to create the initial scheme of Chrono objects (default=1)" />               
+				<bodyfixed id="domain" mkbound="0"/>
+                <bodyfloating id="weel" mkbound="1"/>
+                <bodyfloating id="bucket1" mkbound="2"/>
+                <bodyfloating id="bucket2" mkbound="3"/>
+                <bodyfloating id="bucket3" mkbound="4"/>
+                <bodyfloating id="bucket4" mkbound="5"/>
+                <link_hinge idbody1="weel">
+                    <rotpoint x="5.5" y="0" z="3.0" comment="Point for rotation" />
+                    <rotvector x="0" y="1" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="500" comment="Torsional damping [Nms/rad]" />
+                </link_hinge>
+                <link_hinge idbody1="weel" idbody2="bucket1">
+                    <rotpoint x="5.5" y="0" z="1.1" comment="Point for rotation" />
+                    <rotvector x="0" y="1" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="100" comment="Torsional damping [Nms/rad]" />
+                </link_hinge>
+                <link_hinge idbody1="weel" idbody2="bucket2">
+                    <rotpoint x="5.5" y="0" z="4.8" comment="Point for rotation" />
+                    <rotvector x="0" y="1" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="100" comment="Torsional damping [Nms/rad]" />
+                </link_hinge>
+                <link_hinge idbody1="weel" idbody2="bucket3">
+                    <rotpoint x="7.35" y="0" z="3.0" comment="Point for rotation" />
+                    <rotvector x="0" y="1" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="100" comment="Torsional damping [Nms/rad]" />
+                </link_hinge>
+                <link_hinge idbody1="weel" idbody2="bucket4">
+                    <rotpoint x="3.65" y="0" z="3.0" comment="Point for rotation" />
+                    <rotvector x="0" y="1" z="0" comment="Vector direction for rotation" />
+                    <stiffness value="0" comment="Torsional stiffness [Nm/rad]" />
+                    <damping value="100" comment="Torsional damping [Nms/rad]" />
+                </link_hinge>
+            </chrono>
+        </special>
+        <parameters>
+            <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />
+            <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping (default=40)" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (default=2)" />
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
+            <parameter key="Visco" value="0.01" comment="Viscosity value" />
+            <parameter key="ViscoBoundFactor" value="1" comment="Multiply viscosity value with boundary (default=1)" />
+			<parameter key="DensityDT" value="2" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
+			<parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
+            <parameter key="Shifting" value="0" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
+            <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
+            <parameter key="ShiftTFS" value="0" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
+            <parameter key="RigidAlgorithm" value="3" comment="Rigid Algorithm 0:collision-free, 1:SPH, 2:DEM, 3:Chrono (default=1)" />
+            <parameter key="FtPause" value="0.0" comment="Time to freeze the floatings at simulation start (warmup) (default=0)" units_comment="seconds" />
+            <parameter key="CoefDtMin" value="0.05" comment="Coefficient to calculate minimum time step dtmin=coefdtmin*h/speedsound (default=0.05)" />
+            <parameter key="DtIni" value="0" comment="Initial time step. Use 0 to defult use (default=h/speedsound)" units_comment="seconds" />
+            <parameter key="DtMin" value="0" comment="Minimum time step. Use 0 to defult use (default=coefdtmin*h/speedsound)" units_comment="seconds" />
+            <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
+            <parameter key="TimeMax" value="5" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.01" comment="Time out data" units_comment="seconds" />
+            <parameter key="PartsOutMax" value="1" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
+            <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
+            <parameter key="XPeriodicIncZ" value="5.20" comment="Increase of Z with periodic BC" />
+            <simulationdomain comment="Defines domain of simulation (default=Uses minimun and maximum position of the generated particles)">
+                <posmin x="default" y="default" z="default" comment="e.g.: x=0.5, y=default-1, z=default-10%" />
+                <posmax x="default" y="default" z="default + 50%" />
+            </simulationdomain>
+        </parameters>
+    </execution>
+</case>

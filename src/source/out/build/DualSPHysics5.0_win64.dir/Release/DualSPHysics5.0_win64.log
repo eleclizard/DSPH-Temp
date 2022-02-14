@@ -1,0 +1,8 @@
+﻿  Building NVCC (Device) object CMakeFiles/DualSPHysics5.0_win64.dir/Release/DualSPHysics5.0_win64_generated_JSphGpu_ker.cu.obj
+  JSphGpu_ker.cu
+  JSphGpu_ker.cu
+  LibJVtkLib_x64_v140_Release.lib(JVtkLib.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     Creating library E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/Release/DualSPHysics5.0_win64.lib and object E:/Doctor_of_Philosophy/DualSPHysics_v5.0_Temperature/src/source/out/build/Release/DualSPHysics5.0_win64.exp
+  Generating code
+  Finished generating code
+  DualSPHysics5.0_win64.vcxproj -> E:\Doctor_of_Philosophy\Dummy_DSPH_bin\bin\windows\DualSPHysics5.0_win64.exe
